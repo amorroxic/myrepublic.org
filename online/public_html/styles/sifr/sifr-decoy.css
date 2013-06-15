@@ -1,0 +1,23 @@
+/* These are standard sIFR styles... do not modify */
+
+.sIFR-replaced {
+	visibility: visible !important;
+	margin: 0;
+  	line-height: 1em;
+}
+
+span.sIFR-alternate {
+  	line-height: 1em;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+
+.sIFR-hasFlash h1 {
+	visibility: hidden;
+  	font-size: 14px;
+  	line-height: 1em;
+}

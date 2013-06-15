@@ -1,0 +1,35 @@
+			<h4>Random destination: <span class="color_magenta">Netherlands Antilles</span>. This is <span class="color_magenta">Aruba</span>.</h4>
+			<?php echo $this->render('minimal/submenu.phtml'); ?>			
+			
+			<br/><Br/>
+			
+			<script language="JavaScript">
+			<!--
+			var isInternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+			// Handle all the FSCommand messages in a Flash movie.
+			function cities_DoFSCommand(command, args) {
+				var citiesObj = isInternetExplorer ? document.all.cities : document.cities;
+				//
+				// Place your code here.
+				//
+			}
+			
+			// Hook for Internet Explorer.
+			if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 && navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+				document.write('<script language=\"VBScript\"\>\n');
+				document.write('On Error Resume Next\n');
+				document.write('Sub cities_FSCommand(ByVal command, ByVal args)\n');
+				document.write('	Call cities_DoFSCommand(command, args)\n');
+				document.write('End Sub\n');
+				document.write('</script\>\n');
+			}
+			//-->
+			</script>
+			
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="cities" width="640" height="480" align="middle">
+			<param name="allowScriptAccess" value="always" />
+
+			<param name="allowFullScreen" value="true" />
+			<param name="FlashVars" value="did=74&pid=&uid=&fid="/>
+			<param name="movie" value="/flash/cities.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" /><embed src="/flash/cities.swf" quality="high" bgcolor="#000000" width="640" height="480" swLiveConnect=true id="cities" name="cities" align="middle" allowFullScreen="true" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" FlashVars="did=74&pid=&uid=&fid="/>
+			</object>			

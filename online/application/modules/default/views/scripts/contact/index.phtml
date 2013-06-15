@@ -1,0 +1,25 @@
+<h4>Contact us (form not yet active).</h4>
+<div class="top_20"></div>
+
+<?php if(!empty($this->message)) :?>
+	<h6><?php echo $this->escape($this->message);?></h6>
+<?php endif; ?>	
+
+<div class="clear"></div>
+
+<form action="<?php echo $this->l("my-account","login");?>" method="post">
+    
+    <label for="mail">Your email address:</label><br/>
+    <input type="text" name="mail" value=""/>
+	
+	<div class="clear"></div>
+
+    <label for="text">Message</label><br/>
+    <textarea name="text" style="width:350px;height:150px;"></textarea>
+
+	<div class="clear"></div>
+
+	
+	<input type="submit" name="login" value="<?php echo $this->t("Send inquiry");?>" class="button" />
+
+</form>

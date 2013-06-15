@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<nav>
+		<home>
+			<label>Home</label>
+			<uri>/</uri>
+			<pages>
+				<cpro>
+					<label>Creative Professionals</label>
+					<uri>/creative-professionals</uri>
+					<display>top-menu</display>
+					<pages>
+						<cpro1>
+							<label>Overview</label>
+							<uri>/creative-professionals/overview</uri>
+							<display>top-menu</display>
+						</cpro1>
+						<cpro2>
+							<label>Commercial Photographers</label>
+							<uri>/creative-professionals/commercial-photographers</uri>
+							<display>top-menu</display>
+						</cpro2>
+						<cpro3>
+							<label>Wedding Photographers</label>
+							<uri>/creative-professionals/wedding-photographers</uri>
+							<display>top-menu</display>
+						</cpro3>
+						<cpro4>
+							<label>Outdoor Photographers</label>
+							<uri>/creative-professionals/outdoor-photographers</uri>
+							<display>top-menu</display>
+						</cpro4>
+						<cpro5>
+							<label>Photojournalists</label>
+							<uri>/creative-professionals/photojournalists</uri>
+							<display>top-menu</display>
+						</cpro5>
+						<cpro6>
+							<label>More Photographers</label>
+							<uri>/creative-professionals/more-photographers</uri>
+							<display>top-menu</display>
+						</cpro6>
+						<cpro7>
+							<label>Agencies</label>
+							<uri>/creative-professionals/agencies</uri>
+							<display>top-menu</display>
+						</cpro7>
+						<cpro8>
+							<label>Architects &amp; Interior Designers</label>
+							<uri>/creative-professionals/architects-and-interior-designers</uri>
+							<display>top-menu</display>
+						</cpro8>
+						<cpro9>
+							<label>Graphic Designers</label>
+							<uri>/creative-professionals/graphic-designers</uri>
+							<display>top-menu</display>
+						</cpro9>
+						<cpro10>
+							<label>More Creative Professionals</label>
+							<uri>/creative-professionals/more-creative-professionals</uri>
+							<display>top-menu</display>
+						</cpro10>
+						<cpro11>
+							<label>Students &amp; Educators</label>
+							<uri>/creative-professionals/students-and-educators</uri>
+							<display>top-menu</display>
+						</cpro11>
+					</pages>
+				</cpro>
+				<ws>
+					<label>Website Services</label>
+					<uri>/website-services</uri>
+					<display>top-menu</display>
+					<pages>
+						<ws1>
+							<label>Overview</label>
+							<uri>/website-services/overview</uri>
+							<display>top-menu</display>
+						</ws1>
+						<ws2>
+							<label>Predesigned Websites</label>
+							<uri>/website-services/predesigned-websites</uri>
+							<display>top-menu</display>
+						</ws2>
+						<ws3>
+							<label>Customized Websites</label>
+							<uri>/website-services/customized-websites</uri>
+							<display>top-menu</display>
+						</ws3>
+						<ws4>
+							<label>liveBooks editSuite</label>
+							<uri>/website-services/liveBooks-editSuite</uri>
+							<display>top-menu</display>
+						</ws4>
+						<ws5>
+							<label>Partners</label>
+							<uri>/website-services/partners</uri>
+							<display>top-menu</display>
+						</ws5>
+						<ws6>
+							<label>Pricing &amp; Options</label>
+							<uri>/website-services/pricing-and-options</uri>
+							<display>top-menu</display>
+						</ws6>
+					</pages>
+				</ws>
+				<ft>
+					<label>Features Tour</label>
+					<uri>/features-tour</uri>
+					<display>top-menu</display>
+					<pages>
+						<ft1>
+							<label>Overview</label>
+							<uri>/features-tour/overview</uri>
+							<display>top-menu</display>
+						</ft1>
+						<ft2>
+							<label>User Experience</label>
+							<uri>/features-tour/user-experience</uri>
+							<display>top-menu</display>
+						</ft2>
+						<ft3>
+							<label>Search Optimization</label>
+							<uri>/features-tour/search-optimization</uri>
+							<display>top-menu</display>
+						</ft3>
+						<ft4>
+							<label>Client Convenience</label>
+							<uri>/features-tour/client-convenience</uri>
+							<display>top-menu</display>
+						</ft4>
+						<ft5>
+							<label>Easy Image Management</label>
+							<uri>/features-tour/easy-image-management</uri>
+							<display>top-menu</display>
+						</ft5>
+					</pages>
+				</ft>
+				<dg>
+					<label>Design Gallery</label>
+					<uri>/design-gallery</uri>
+					<display>top-menu</display>
+					<pages>
+						<dg1>
+							<label>Overview</label>
+							<uri>/design-gallery/overview</uri>
+							<display>top-menu</display>
+						</dg1>
+						<dg2>
+							<label>Custom Website Gallery</label>
+							<uri>/design-gallery/custom-website-gallery</uri>
+							<display>top-menu</display>
+						</dg2>
+						<dg3>
+							<label>Site Chooser</label>
+							<uri>/design-gallery/site-chooser</uri>
+							<display>top-menu</display>
+						</dg3>
+					</pages>
+				</dg>
+				<ec>
+					<label>Events &amp; Community</label>
+					<uri>/events-and-community</uri>
+					<display>top-menu</display>
+					<pages>
+						<ec1>
+							<label>Overview</label>
+							<uri>/events-and-community/overview</uri>
+							<display>top-menu</display>
+						</ec1>
+						<ec2>
+							<label>Events</label>
+							<uri>/events-and-community/events</uri>
+							<display>top-menu</display>
+						</ec2>
+						<ec3>
+							<label>Webinars</label>
+							<uri>/events-and-community/webinars</uri>
+							<display>top-menu</display>
+						</ec3>
+						<ec4>
+							<label>Videos</label>
+							<uri>/events-and-community/videos</uri>
+							<display>top-menu</display>
+						</ec4>
+						<ec5>
+							<label>Resolve Blog</label>
+							<uri>/blog</uri>
+							<display>top-menu</display>
+						</ec5>
+					</pages>
+				</ec>
+				<support>
+					<label>Support</label>
+					<uri>/support</uri>
+					<display>top-menu</display>
+					<pages>
+						<support1>
+							<label>Overview</label>
+							<uri>/support/overview</uri>
+							<display>top-menu</display>
+						</support1>
+						<support2>
+							<label>Get Started</label>
+							<uri>/support/get-started</uri>
+							<display>top-menu</display>
+						</support2>
+						<support3>
+							<label>Common Questions</label>
+							<uri>/support/common-questions</uri>
+							<display>top-menu</display>
+						</support3>
+						<support4>
+							<label>Video Tutorials</label>
+							<uri>/support/video-tutorials</uri>
+							<display>top-menu</display>
+						</support4>
+						<support5>
+							<label>Knowledge Base</label>
+							<uri>/support/knowledge-base</uri>
+							<display>top-menu</display>
+						</support5>
+						<support6>
+							<label>Go Live Request</label>
+							<uri>/support/go-live</uri>
+							<display>top-menu</display>
+						</support6>
+						<support7>
+							<label>Upgrade Request</label>
+							<uri>/support/upgrade-request</uri>
+							<display>top-menu</display>
+						</support7>
+						<support8>
+							<label>Contact Support</label>
+							<uri>/support/contact-support</uri>
+							<display>top-menu</display>
+						</support8>
+					</pages>
+				</support>
+				<about>
+					<label>About liveBooks</label>
+					<uri>/about</uri>
+					<display>footer</display>
+				</about>
+				<press>
+					<label>Press</label>
+					<uri>/press</uri>
+					<display>footer</display>
+				</press>
+				<philanthropy>
+					<label>Philanthropy</label>
+					<uri>/philanthropy</uri>
+					<display>footer</display>
+				</philanthropy>
+				<jobs>
+					<label>Jobs</label>
+					<uri>/jobs</uri>
+					<display>footer</display>
+				</jobs>
+				<blog>
+					<label>Resolve Blog</label>
+					<uri>/blog</uri>
+					<display>footer</display>
+				</blog>
+				<sitemap>
+					<label>Sitemap</label>
+					<uri>/sitemap</uri>
+					<display>footer</display>
+				</sitemap>
+				<contact>
+					<label>Contact Us</label>
+					<uri>/contact-us</uri>
+					<display>footer</display>
+				</contact>
+				<privacypolicy>
+					<label>Privacy Policy</label>
+					<uri>/privacy-policy</uri>
+					<display>footer</display>
+				</privacypolicy>
+				<termsofuse>
+					<label>Terms of Use</label>
+					<uri>/terms-of-use</uri>
+					<display>footer</display>
+				</termsofuse>
+			</pages>
+		</home>
+	</nav>
+</configdata>

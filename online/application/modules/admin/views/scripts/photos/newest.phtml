@@ -1,0 +1,7 @@
+<script type="text/javascript">
+var runAfter = "refreshNewest";
+var runParams = {"page":<?=$this->page;?>};
+</script>
+<?=$this->render("photos/jquery-ui.phtml");?>
+<h4>Newest photos.</h4>
+<?=$this->render("photos/photo-list.phtml");?>

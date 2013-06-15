@@ -1,0 +1,22 @@
+<h4>Entering <span class="color_magenta"><?php echo $this->activeCountry["name"];?></span>.</h4>
+<?php echo $this->render('countries/submenu.phtml'); ?>		
+
+
+<?php
+	foreach ($this->placePhotos as $place) {
+	
+	$contentArray = array();
+	$contentArray[$this->language] = array();
+	$contentArray[$this->language]["body"] 	= $place["name"];
+	$contentArray[$this->language]["id"] 	= $place["id"];
+	$contentLink = $this->l("destinations","index",$contentArray);
+?>
+
+    	<div class="thumbnail-wrapper">
+    		<a  title="Visit <?=$place["name"];?>" href="<?=$contentLink;?>"><div class="image" style="background-image: url('<?=$place["photo"]["thumb"];?>')"></div></a>
+    		<div class="clear"></div>
+    		<center><div class="text"><a title="See all photos from <?=$place["name"];?>" href="<?=$contentLink;?>"><?=$place["name"];?></a></div></center>
+    	</div>
+<?php
+	}
+?>

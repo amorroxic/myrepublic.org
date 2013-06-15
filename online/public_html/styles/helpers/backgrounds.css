@@ -1,0 +1,31 @@
+.back-red {
+	background-color: #f00;
+}
+
+.back-green {
+	background-color: #0f0;
+}
+
+.back-blue {
+	background-color: #00f;
+}
+
+.back-gray {
+	background-color: #f7f7f7;
+}
+
+.back-lightgray {
+	background-color: #fff;
+}
+
+.back-darkgray {
+	background-color: #ccc;
+}
+
+.back-white {
+	background-color: #fff;
+}
+
+.border-right-white {
+	border-right: 1px solid #fff;
+}

@@ -1,0 +1,48 @@
+<div class="grid_11 alpha">
+
+<div class="left top_10 right_10">
+My photo sets:
+</div>
+
+<div class="left right_10">
+
+<select id="set-list">
+	<?php 
+	$i = 0; 
+	foreach ($this->sets as $set) {
+		$selected = "";
+		if (isset($this->setID)) {
+			if ($set["id"] == $this->setID) $selected = "selected='selected'";
+		} else {
+			if ($i == 0) $selected = "selected='selected'";
+		}
+		$i++;
+		echo "<option ".$selected." value='".$set["id"]."'>".$set["name"]." (id ".$set["id"].")</option>";
+	}
+	?>
+</select>
+
+</div>
+
+<div class="left right_10">
+<input type="button" class="button" value="Add photos" onclick="addPhotosDialog();"/>
+</div>
+
+<div class="left right_10">
+<input type="button" class="button" value="Add new set" onclick="newSetDialog();" style="margin-left:10px;"/>
+</div>
+
+<div class="left">
+<input type="button" class="button" value="Delete current set" onclick="deleteDialog();" style="margin-left:10px;"/>
+</div>
+
+</div>
+
+
+<div class="clear"></div>
+
+<div class="grid_11 alpha omega top_20" id="photo-set">
+
+<?php echo $this->render("my-account/photos/set-photos.phtml"); ?>
+
+</div>

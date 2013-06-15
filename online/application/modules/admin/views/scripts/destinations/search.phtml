@@ -1,0 +1,23 @@
+<h4>Search for: <span class="color_magenta"><?=$this->search;?></span>.</h4>
+<ul class="left-menu">
+<?php
+if (isset($this->countries)) {
+
+	foreach ($this->countries as $country) {
+		echo '<li><a href="/admin/destinations/countries/id/'.$country["id"].'">'.$country["name"].'</a>';
+		if (count($country["places"]) > 0) {
+			echo ' ( ';
+			foreach ($country["places"] as $place) {
+				echo '<a class="subactive" href="/admin/destinations/locations/id/'.$place["id"].'">'.$place["name"].'</a> ';
+			}
+			echo ' )';
+		}
+		echo "</li>";
+		echo "<div class='clear'></div>";
+	}
+
+} else {
+	echo "No results found.";
+}
+?>
+</ul>

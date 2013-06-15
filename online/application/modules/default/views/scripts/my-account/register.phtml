@@ -1,0 +1,39 @@
+<h4>Register a new account.</h4>
+<?php echo $this->render('my-account/submenu-notlogged.phtml'); ?>	
+		
+<?php if(!empty($this->message)) :?>
+<h6><?php echo $this->escape($this->message);?></h6>
+<?php endif; ?>	
+
+<div class="clear"></div>
+
+<form action="<?php echo $this->l("my-account","register");?>" method="post">
+<div class="right_40 left">
+    <label for="email">E-Mail (used as login)</label><br/>
+    <input type="text" name="email" value="<?php echo $this->email;?>"/>
+</div>
+
+<div class="right_40 left">
+    <label for="username">Website</label><br/>
+    <input type="text" name="website" value="<?php echo $this->website;?>"/>
+</div>
+
+<div class="clear"></div>
+
+<div class="right_40 left">
+    <label for="password">Password</label><br/>
+    <input type="password" name="password" value=""/>
+</div>
+
+<div class="right_40 left">
+    <label for="confirm">Confirm password</label><br/>
+    <input type="password" name="confirm" value=""/>
+</div>
+
+<div class="clear"></div>
+
+<div class="right_40">
+<input type="submit" name="login" value="<?php echo $this->t("Register new account");?>" class="button" />
+</div>
+
+</form>

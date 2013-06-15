@@ -1,0 +1,40 @@
+<?php
+    $controller = strtolower(Zend_Controller_Front::getInstance()->getRequest()->getControllerName());
+?>    
+
+
+<div class="full_length height_100" id="head_full">
+
+	<div class="container_16 height_100" id="head">
+
+		<div class="grid_4 height_40"></div>
+		<div class="grid_1 height_40"></div>
+		<div class="grid_11 top_40"></div>
+		
+		<div class="clear"></div>
+	
+		<div class="grid_4 height_60">&nbsp;</div>
+		<div class="grid_1 height_60">&nbsp;</div>
+
+		<?php if ($controller == "destinations") { $active = "active"; } else { $active = ""; } ?>
+		<div class="grid_2"><h6 class="menu <?php echo $active;?>"><a href="/admin/destinations">Destinations</a></h6></div>
+
+		<?php if ($controller == "photos") { $active = "active"; } else { $active = ""; } ?>
+		<div class="grid_2"><h6 class="menu <?php echo $active;?>"><a href="/admin/photos">Photos</a></h6></div>
+
+		<?php if ($controller == "users") { $active = "active"; } else { $active = ""; } ?>
+		<div class="grid_2"><h6 class="menu <?php echo $active;?>"><a href="/admin/users">Users</a></h6></div>
+
+		<?php if ($controller == "contact") { $active = "active"; } else { $active = ""; } ?>
+		<div class="grid_2"><h6 class="menu <?php echo $active;?>"><a href="/admin/contact">Contact</a></h6></div>
+
+		<div class="clear"></div>
+
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div class="container_16">
+		<div class="grid_16 height_40">&nbsp;</div>
+</div>

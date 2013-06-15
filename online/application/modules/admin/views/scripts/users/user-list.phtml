@@ -1,0 +1,33 @@
+<div id="user-list">
+<?php
+$i = 0;
+if (isset($this->users)) {
+?>
+<ul class="left-menu">
+	<li style="background:#bbb;color:#fff;padding-left: 0;"><div class="grid_4">Name</div><div class="grid_4">E-Mail</div><div class="grid_2">Photos</div><div class="clear"></div></li>
+
+<?php
+foreach ($this->users as $user) {
+	$i++;
+	if ($i%2 == 0) {
+		$class="odd";
+	} else {
+		$class="even";
+	}
+	?>
+	<li class="<?=$class;?>"><div class="grid_4">&nbsp;<?=$user["first_name"]." ".$user["last_name"];?></div><div class="grid_4"><?=$user["email"];?></div><div class="grid_2"><a href="/admin/users/?id=<?=$user["id"];?>"><?=$user["photos"];?></a></div><div class="clear"></div></li>
+	<?php
+}
+?>
+</ul>
+<?php
+	$pagination = $this->paginationControl($this->users, 'Sliding', 'users/user-paginator.phtml',array('backlink'=>$this->backlink));
+	echo $pagination;
+?>
+
+<?php
+} else {
+	echo "<li>None found.</li>";
+}
+?>
+</div>

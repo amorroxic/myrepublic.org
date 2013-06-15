@@ -1,0 +1,137 @@
+<?php
+
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/global/content.css', 'screen,projection');                 
+
+?>
+
+<script>
+	function toggleImportDiv() {
+		var val = $('upload-selector').value;
+		switch (val) {
+			case "upload":
+							$('upload-div').show();
+							$('lr-div').hide();
+							break;
+			case "lightroom":
+							$('upload-div').hide();
+							$('lr-div').show();
+							break;
+			default:
+							$('upload-div').hide();
+							$('lr-div').hide();
+		}
+	}
+</script>
+
+<div class="cA column noprint" id="cA">
+		
+		<ul class="menu">
+			<?php
+				foreach ($this->galleries as $gallery) {
+						$current = "";
+						if ($this->activeGallery["id"] == $gallery["id"]) $current = " class='parent'";
+						echo "<li ".$current."><a href='/admin/galerii/import/id/".$gallery["id"]."'>".$gallery["title"]."</a></li>";
+				}
+			?>	
+		</ul>
+		<hr class="largeBreak"/>
+</div>
+			
+<hr class="noscreen noprint" />
+			
+<div class="cB column">
+	
+	<div class="content-inner-left">
+	
+
+
+						<?php
+						if (isset($this->activeGallery)) {
+						?>
+						<form action="/admin/galerii/process-import" enctype="multipart/form-data" method="post">
+						
+						<input type="hidden" name="gallery-name" value="<?=$this->activeGallery["title"];?>"/>
+						<input type="hidden" name="gallery-id" value="<?=$this->activeGallery["id"];?>"/>
+						
+						<div class="left">
+							<div class="quote">
+
+								<blockquote>
+									<div class="inner">
+										De unde adaugati imaginile?
+									</div>
+								</blockquote>
+							</div>				
+						
+							<select id="upload-selector" name="upload-selector" onchange="toggleImportDiv()">
+								<option value="upload">Upload de pe hard-disk</option>
+								<option value="lightroom">Dintr-un folder LightRoom</option>
+							</select>
+						
+						</div>			
+						
+
+						<div class="left lspace" style="display:block" id="upload-div">
+							<div class="quote">
+
+								<blockquote>
+									<div class="inner">
+										Selectati imaginea
+									</div>
+								</blockquote>
+							</div>				
+
+								<label class="cabinet"> 
+								    <input type="file" class="file" name="image"/>
+								</label>
+						
+						</div>			
+						
+
+						<div class="left lspace" style="display:none" id="lr-div">
+							<div class="quote">
+
+								<blockquote>
+									<div class="inner">
+										Selectati folderul LightRoom
+									</div>
+								</blockquote>
+							</div>				
+
+							<select name="lightroom">
+								<?php
+									foreach ($this->lightroomFolders as $folder) {
+										echo "<option value='".$folder."'>".$folder."</option>";
+									}
+								?>
+							</select>
+						
+						</div>			
+															
+						<div class="left lspace">
+							<div class="quote">
+
+								<blockquote>
+									<div class="inner">
+										Incarca imaginile
+									</div>
+								</blockquote>
+							</div>
+							<input type="submit" value="Incarca"/>				
+						</div>
+						
+						</form>
+						
+						<div class="clear">&nbsp;</div>				
+						
+						
+						<?php
+						} else {
+							echo "Nu ati selectat nici o galerie in care sa importati fotografii";
+						}
+						?>
+
+		
+	</div><!-- content-inner-left -->
+
+</div><!-- cB column -->		

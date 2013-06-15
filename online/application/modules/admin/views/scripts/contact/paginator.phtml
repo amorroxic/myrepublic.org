@@ -1,0 +1,47 @@
+<div id="paginationControl">
+Mesaje <?= $this->firstItemNumber; ?> - <?= $this->lastItemNumber; ?> din <?= $this->totalItemCount; ?> | 
+
+<a href="<?= $this->url(array('page' => $this->first)); ?>">prima pagina</a> | 
+
+<!-- Previous page link -->
+<?php if (isset($this->previous)): ?>
+  <a href="<?= $this->url(array('page' => $this->previous)); ?>">inapoi</a> |
+<?php else: ?>
+  <span class="disabled">inapoi</span> |
+<?php endif; ?> 
+
+<?php
+foreach ($this->pagesInRange as $page) {
+?>
+<?php
+if ($this->current != $page) {
+?>
+	<a href="<?= $this->url(array('page' => $page)); ?>"><?= $page; ?></a> 
+<?php	
+} else {
+	echo $page;
+}
+}
+
+if ($this->lastPageInRange < $this->last) {
+
+	echo ".. ";
+?>	
+	<a href="<?= $this->url(array('page' => $this->last)); ?>"><?= $this->last; ?></a>
+<?
+}
+
+?>
+
+ | 
+
+<!-- Next page link -->
+<?php if (isset($this->next)): ?>
+  <a href="<?= $this->url(array('page' => $this->next)); ?>">inainte</a> |
+<?php else: ?>
+  <span class="disabled">inainte</span> |
+<?php endif; ?>
+
+<a href="<?= $this->url(array('page' => $this->last)); ?>">ultima pagina</a><br/>
+
+</div>

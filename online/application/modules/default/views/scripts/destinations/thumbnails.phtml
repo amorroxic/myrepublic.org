@@ -1,0 +1,19 @@
+<h4>Welcome to <span class="color_magenta"><?php echo $this->activeCountry["name"];?></span>. This is <span class="color_magenta"><?php echo $this->activePlace["name"];?></span>.</h4>
+<?php echo $this->render('destinations/submenu.phtml'); ?>		
+
+<?php
+	foreach ($this->photos as $photo) {
+	
+	$contentArray = array();
+	$contentArray[$this->language] = array();
+	$contentArray[$this->language]["body"] 	= $this->activePlace["name"];
+	$contentArray[$this->language]["id"] 	= $this->activePlace["id"];
+	$contentLink = $this->l("destinations","index",$contentArray)."?p=".$photo["id"];
+?>
+
+    	<div class="thumbnail-wrapper">
+    		<a title="<?=$this->activePlace["name"];?>, <?=$photo["country_name"];?>" href="<?=$contentLink;?>"><div class="image" style="background-image: url('<?=$photo["thumb"];?>')"></div></a>
+    	</div>
+<?php
+	}
+?>

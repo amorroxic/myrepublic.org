@@ -1,0 +1,58 @@
+<?php
+	$this->headScript()->appendFile($this->baseURL() . '/javascript/ajax/ajax.js');
+	$this->headScript()->appendFile($this->baseURL() . '/javascript/ajax/utils.js');
+	$this->headScript()->appendFile($this->baseURL() . '/javascript/ajax/communication.js');
+	
+	if (isset($this->activePhoto)) {
+		$thumb = "http://".$_SERVER["HTTP_HOST"].$this->activePhoto["thumb"];
+		$photo = "http://".$_SERVER["HTTP_HOST"].$this->activePhoto["photo"];
+	} else {
+		$thumb = "";
+		$photo = "";
+	}
+	
+	$this->headLink(array('rel' => 'image_src', 'href' => $thumb),'PREPEND');
+?>
+		
+<h4>Welcome to <span class="color_magenta"><?php echo $this->activeCountry["name"];?></span>. This is <span class="color_magenta"><?php echo $this->activePlace["name"];?></span>.</h4>
+<?php echo $this->render('destinations/submenu.phtml'); ?>			
+
+		<script language="JavaScript">
+		<!--
+		var isInternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+		// Handle all the FSCommand messages in a Flash movie.
+		function cities_DoFSCommand(command, args) {
+			var citiesObj = isInternetExplorer ? document.all.cities : document.cities;
+			//
+			// Place your code here.
+			//
+		}
+		
+		// Hook for Internet Explorer.
+		if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 && navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+			document.write('<script language=\"VBScript\"\>\n');
+			document.write('On Error Resume Next\n');
+			document.write('Sub cities_FSCommand(ByVal command, ByVal args)\n');
+			document.write('	Call cities_DoFSCommand(command, args)\n');
+			document.write('End Sub\n');
+			document.write('</script\>\n');
+		}
+		//-->
+		</script>
+		<div id="cities-wrapper">
+		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="cities" width="638" height="478" align="middle">
+		<param name="allowScriptAccess" value="always" />
+		<param name="allowFullScreen" value="true" />
+		<param name="FlashVars" value="did=<?=$this->did;?>&pid=<?=$this->pid;?>&uid=<?=$this->uid;?>&fid=<?=$this->fid;?>"/>
+		<param name="movie" value="/flash/cities.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" /><embed src="/flash/cities.swf" quality="high" bgcolor="#000000" width="638" height="478" swLiveConnect=true id="cities" name="cities" align="middle" allowFullScreen="true" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" FlashVars="did=<?=$this->did;?>&pid=<?=$this->pid;?>&uid=<?=$this->uid;?>&fid=<?=$this->fid;?>"/>
+		</object>
+		</div>	
+		
+		<div class="clear"></div>
+		<ul class="line">
+			<li class="fullscreen first"><a id="big-image-link" title="<?php echo $this->activePlace["name"].", ".$this->activeCountry["name"];?>" href="<?php echo $photo;?>" rel="shadowbox">Big image</a></li>
+			<li class="facebook"><a target="_blank" id="share-link" href="">Share</a></li>
+			<li class="like"><a id="like-link" style="cursor:pointer;" onclick="like();">I like this</a></li>
+		</ul>				
+		<input type="hidden" id="photo-id" value=""/>
+		<input type="hidden" id="fav-status" value=""/>

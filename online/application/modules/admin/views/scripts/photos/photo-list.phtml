@@ -1,0 +1,28 @@
+<div id="photo-list">
+<?php
+	$pagination = $this->paginationControl($this->photos, 'Sliding', 'photos/photos-paginator.phtml',array('backlink'=>$this->backlink));
+	echo $pagination;
+?>
+<div class="clear"></div>
+<div class="top_20"></div>
+<?php
+	foreach ($this->photos as $photo) {
+?>
+
+    	<div class="thumbnail-wrapper">
+    		<a target="_blank" href="<?=$photo["photo"];?>"><div class="image" style="background-image: url('<?=$photo["thumb"];?>')"></div></a>
+    		<div class="clear"></div>
+    		<center><a href="/admin/photos/locations/destination/<?=$photo["destination_id"];?>"><?=$photo["destination_name"];?></a></center>
+    		<div class="clear"></div>
+    		<center><a href="/admin/photos/locations/country/<?=$photo["country_id"];?>"><?=$photo["country_name"];?></a></center>
+			<center><div class="text"><a class='subactive' onclick="assignDialog('<?=$photo["id"];?>');">change location</a> / <a class='subactive' onclick="deleteDialog('<?=$photo["id"];?>');">delete</a></div></center>
+    	</div>
+<?php
+	}
+?>
+<div class="clear"></div>
+<div class="top_20"></div>
+<?php
+	echo $pagination;
+?>
+</div>

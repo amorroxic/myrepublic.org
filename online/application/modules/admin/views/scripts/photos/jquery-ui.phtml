@@ -1,0 +1,61 @@
+<div id="dialog-confirm" title="Delete photo" style="display:none;">
+	<div class="top_5">Are you sure?</div>
+</div>
+
+<div id="dialog-assign" title="Assign to new location" style="display:none;">
+		<select id="location_id" style="width:250px;">
+			<?php
+				foreach ($this->destinations as $destination) {
+					echo "<option value='".$destination["id"]."'>".$destination["name"].", ".$destination["country_name"]."</option>";
+				}
+			?>
+		</select>
+</div>
+
+
+<script type="text/javascript">
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		$("#dialog").dialog("destroy");
+	
+		
+		function deleteDialog(photoID) {
+
+			$("#dialog-confirm").dialog({
+				resizable: false,
+				height:170,
+				modal: true,
+				buttons: {
+					'Delete': function() {
+						deletePhoto(photoID);
+						$(this).dialog('close');
+					},
+					Cancel: function() {
+						$(this).dialog('close');
+					}
+				}
+			});
+
+		}
+		
+		
+		function assignDialog(photoID) {
+
+			$("#dialog-assign").dialog({
+				resizable: false,
+				height:170,
+				modal: true,
+				buttons: {
+					'Assign': function() {
+						var locationID = $('#location_id').val();
+						assignPhoto(photoID,locationID);
+						$(this).dialog('close');
+					},
+					Cancel: function() {
+						$(this).dialog('close');
+					}
+				}
+			});
+
+		}		
+		
+</script>

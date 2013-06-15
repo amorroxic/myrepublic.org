@@ -1,0 +1,59 @@
+<?php
+	$movieName = "header_".$this->language;
+?>
+<?=$this->langSwitch();?>	
+<div class="header">
+	<div class="container_16">
+
+		<div class="grid_16">
+			<div class="logo left">
+				<h1 class="subheader">my<span>*</span>republic</h1>
+			</div>
+			<div class="search right">
+				
+				<form action="" method="post">
+					<ul>
+						<li>
+							<div class="label">Search</div>
+						</li>
+						<li>
+							<div class="input"><input type="text" name="search"/></div>
+						</li>
+						<li>
+							<div class="button"><input type="submit" class="button" value="Search destination" /></div>
+						</li>
+					</ul>
+					
+				</form>
+			</div>
+		</div>
+		
+		<div class="grid_16 top-menu round">
+			<ul class="horz_nav_round">
+				<li><a href="/">Home</a></li>
+				<li><a href="<?php echo $this->l("about");?>">What's it all about</a></li>
+				<?php
+					if (Authentication_Manager::isAllowed()) {
+				?>
+				<li><a href="<?php echo $this->l("my-account","photos");?>">My photos</a></li>
+				<li><a href="<?php echo $this->l("my-account","logout");?>">Logout</a></li>
+				<?php
+					} else {
+				?>
+				<li><a href="<?php echo $this->l("my-account");?>">Login / Register</a></li>
+				<?php
+					}
+				?>
+				<li><a href="<?php echo $this->l("contact");?>">Contact</a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="clear"></div>
+		<div class="bottom"></div>
+		<div class="clear"></div>
+
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>

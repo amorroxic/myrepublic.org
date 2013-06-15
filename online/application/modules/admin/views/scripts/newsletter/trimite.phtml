@@ -1,0 +1,39 @@
+<?php
+
+$this->headScript()->appendFile($this->baseURL() . '/javascript/tiny_mce/tiny_mce_src.js');
+$this->headScript()->appendFile($this->baseURL() . '/javascript/tiny_mce/init_tiny_mce.js');
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/global/content.css', 'screen,projection');                 
+
+?>
+
+<div class="cA column noprint" id="cA">
+		
+		<ul class="menu">
+			<li>
+			<strong>Statistica</strong>
+			<br/><br/>
+			Avem <?=count($this->emails);?> adrese de e-mail inscrise la newsletter.
+			</li>
+		</ul>		
+		
+		<hr class="largeBreak"/>
+</div>
+			
+<hr class="noscreen noprint" />
+			
+<div class="cB column">
+	
+	<div class="content-inner-left">
+
+				<ul id="tabs_example_one" class="subsection_tabs">  
+				    <li class="tab"><a href="#send_newsletter">Trimite newsletter</a></li>  
+				</ul>  
+				
+				<div id="send_newsletter">
+					<br/>
+					<strong>Newsletter-ul a fost trimis.</strong>								
+				</div>				
+		
+	</div><!-- content-inner-left -->
+
+</div><!-- cB column -->

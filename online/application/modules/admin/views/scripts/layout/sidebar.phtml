@@ -1,0 +1,12 @@
+<?php
+$controller = Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
+$controller = strtolower($controller);
+
+    	try {
+	    	$content = $this->render($controller.'/navigation.phtml');
+	    	echo $content;
+    	} catch (Exception $e) {
+    	}
+
+?>
+&nbsp;

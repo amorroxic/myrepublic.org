@@ -1,0 +1,141 @@
+<?php
+
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/global/content.css', 'screen,projection');                 
+
+?>
+
+
+<div class="cA column noprint" id="cA">
+		
+		<ul class="menu">
+			<?php
+				foreach ($this->galleries as $gallery) {
+						$current = "";
+						if ($this->activeGallery["id"] == $gallery["id"]) $current = " class='parent'";
+						echo "<li ".$current."><a href='/admin/galerii/index/id/".$gallery["id"]."'>".$gallery["title"]."</a></li>";
+				}
+			?>	
+		</ul>
+		<hr class="largeBreak"/>
+</div>
+			
+<hr class="noscreen noprint" />
+			
+<div class="cB column">
+	
+	<div class="content-inner-left">
+	
+
+						<div class="left">
+						<h3>Adaugare galerie noua</h3>
+							<div class="quote">
+
+								<blockquote>
+									<div class="inner">
+										Numele noii galerii
+									</div>
+								</blockquote>
+							</div>				
+							<form action="/admin/galerii/adauga/" method="post" onsubmit="return validateField('gallery-name','Numele galeriei nu poate fi gol')">
+								<input type='text' id='gallery-name' name='gallery-name' style="width:140px;"/>
+								<input type='submit' value='Adauga'/>
+
+								<br/><br/>
+							</form>
+						
+						</div>			
+
+						<?php
+						if (isset($this->activeGallery)) {
+						?>
+						
+						<div class="left lspace">
+						<h3>Schimbare titlu</h3>
+							<div class="quote">
+								<blockquote>
+									<div class="inner">
+										Titlul nou
+									</div>
+
+								</blockquote>
+							</div>				
+							<form action="/admin/galerii/edit" method="post" onsubmit="return validateField('gallery-name-edit','Numele galeriei nu poate fi gol')">
+								<input type="hidden" name="id" value="<?=$this->activeGallery["id"];?>"/>
+								<input type='text' id='gallery-name-edit' name='gallery-name-edit' style="width:140px;" value="<?=$this->activeGallery["title"];?>"/>
+								<input type='submit' value='Modifica'/>
+								<br/><br/>
+							</form>
+						
+						</div>
+
+						<div class="left lspace">
+						<h3>Stergere galerie</h3>
+							<div class="quote">
+								<blockquote>
+									<div class="inner">
+										Stergeti galeria?
+									</div>
+
+								</blockquote>
+							</div>				
+							<form action="/admin/galerii/delete" method="post">
+								<input type="hidden" name="id" value="<?=$this->activeGallery["id"];?>"/>
+								<input type='submit' value='Confirma stergerea'/>
+								<br/><br/>
+							</form>
+						
+						</div>	
+						
+						
+						<?php
+						}
+						?>
+
+				<div class="clear">&nbsp;</div>				
+										
+						<form action="/admin/galerii/update-photos" method="post">
+						
+						<input type="hidden" name="gallery-id" value="<?=$this->activeGallery["id"];?>"/>
+						<input type="hidden" name="image-count" value="<?=count($this->photos);?>"/>
+												
+						<div class="clear">&nbsp;</div>		
+						<table style="width:680px">
+							<tr style="background-color:#15B5DF;">
+								<td><font color="#ffffff">Imagine</font></td>
+								<td><font color="#ffffff">Titlu</font></td>
+								<td><font color="#ffffff">Descriere</font></td>
+								<td>&nbsp;</td>
+							</tr>
+							<?php
+								$count = 0;
+								foreach ($this->photos as $photo) {
+									if ($count % 2 == 0) {
+										$class=" class='alt'";
+									} else {
+										$class="";
+									}
+							?>
+							
+								<tr <?=$class;?>>
+									<td>
+										<img src="<?=$photo["thumb"];?>"/>
+										<input type="hidden" name="photo_<?=$count;?>" value="<?=$photo["id"];?>"/>																</td>
+									<td><input type="text" name="title_<?=$count;?>" value="<?=$photo["name"];?>"/></td>
+									<td><input type="text" name="description_<?=$count;?>" value="<?=$photo["description"];?>"/></td>
+									<td><a href="/admin/galerii/sterge-imagine/gid/<?=$this->activeGallery["id"];?>/id/<?=$photo["id"];?>">Sterge</a></td>
+								</tr>
+							
+							<?php
+								$count++;
+								}
+							?>
+						</table>
+						<input type="submit" value="Salveaza informatii"/>
+						<div class="clear">&nbsp;</div>		
+						<br/><br/>
+						
+					</form>									
+		
+	</div><!-- content-inner-left -->
+
+</div><!-- cB column -->		

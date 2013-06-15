@@ -1,0 +1,78 @@
+<?=$this->doctype('XHTML1_TRANSITIONAL') ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<?php
+
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/960/reset.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/960/text.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/960/960.css', 'screen,projection');                 
+
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/helpers/general.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/helpers/boxes.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/forms/buttons.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/jquery-ui/flick/jquery-ui-1.8.4.custom.css', 'screen,projection');                 
+
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/shadowbox/shadowbox.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/sifr/sIFR-screen.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/sifr/sIFR-print.css', 'print');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/sifr/sifr-decoy.css', 'screen,projection');                 
+
+$this->headScript()->prependFile($this->baseURL() . '/javascript/sifr/sifr-replace.js');
+$this->headScript()->prependFile($this->baseURL() . '/javascript/sifr/sifr.js');
+
+$this->headScript()->prependFile($this->baseURL() . '/javascript/ajax/admin.js');
+$this->headScript()->prependFile($this->baseURL() . '/javascript/ajax/utils.js');
+$this->headScript()->prependFile($this->baseURL() . '/javascript/ajax/ajax.js');
+
+$this->headScript()->prependFile($this->baseURL() . '/javascript/startup.js');
+$this->headScript()->prependFile($this->baseURL() . '/javascript/shadowbox/shadowbox.js');
+$this->headScript()->prependFile($this->baseURL() . '/javascript/jquery/jquery.ba-bbq.min.js');
+$this->headScript()->prependFile($this->baseURL() . '/javascript/jquery/jquery-ui-1.8.4.custom.min.js');
+$this->headScript()->prependFile($this->baseURL() . '/javascript/jquery/jquery-1.4.2.min.js');
+
+$this->headTitle()->prepend('my*republic');
+$this->headTitle()->setSeparator(' > ');
+
+?>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<?= $this->headTitle(); ?>
+    <?= $this->headLink(); ?>
+    <?= $this->headScript(); ?>
+</head>
+
+<body>  
+
+<script type="text/javascript">
+	var language = "<?=$this->language;?>";
+	Shadowbox.init({
+	    // skip the automatic setup again, we do this later manually
+	    skipSetup: true
+	});
+</script>
+
+<?php echo $this->render('layout/header.phtml'); ?>
+
+<div class="container_16" id="cont">
+
+		<div class="grid_4">
+		
+		<?php echo $this->render('layout/sidebar.phtml'); ?>
+
+		</div>
+		
+		<div class="grid_1">&nbsp;</div>
+
+		<div class="grid_11">
+			
+			<?= $this->layout()->content; ?>
+			
+		</div>
+
+		<div class="clear"></div>
+
+</div>
+
+<?php echo $this->render('layout/footer.phtml'); ?>
+
+</body></html>

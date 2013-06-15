@@ -1,0 +1,17 @@
+<h4>Locations.</h4>
+
+<ul class="left-menu">
+<?php
+foreach ($this->countries as $country) {
+	echo '<li><a class="subactive" href="/admin/destinations/countries/id/'.$country["id"].'">'.$country["name"].'</a>';
+	if (count($country["places"]) > 0) {
+		echo ' / ';
+		foreach ($country["places"] as $place) {
+			echo '<a href="/admin/destinations/locations/id/'.$place["id"].'">'.$place["name"].'</a> / ';
+		}
+	}
+	echo "</li>";
+	echo "<div class='clear'></div>";
+}
+?>
+</ul>

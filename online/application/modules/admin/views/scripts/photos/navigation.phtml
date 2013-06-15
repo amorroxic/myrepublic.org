@@ -1,0 +1,33 @@
+<?php
+$action = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+$action = strtolower($action);
+
+$cauta = "";
+if (isset($this->queryParams["search"])) $cauta = $this->queryParams["search"];
+
+?>
+
+<h4>Actions</h4>
+<ul class="left-menu">
+<?php if ($action == "newest") { $active = "active"; } else { $active = ""; } ?>
+<li><a class="<?php echo $active;?>" href="/admin/photos/newest">Newest</a></li>
+<?php if ($action == "locations") { $active = "active"; } else { $active = ""; } ?>
+<li><a class="<?php echo $active;?>" href="/admin/photos/locations">By location</a></li>
+</ul>
+
+
+<h4>Search</h4>
+
+
+<form action="/admin/photos/search" method="post">
+    <select name="search_for">
+    	<?php $selected = ""; if ($this->searchFor == "user") $selected = " selected='selected'";?>
+    	<option value="user" <?=$selected;?>>User</option>
+    	<?php $selected = ""; if ($this->searchFor == "location") $selected = " selected='selected'";?>
+    	<option value="location" <?=$selected;?>>Location</option>
+    </select>
+    <input type="text" name="search" value="<?=$cauta;?>"/>
+	<div class="clear"></div>
+	<input type="submit" name="submit" value="Search" class="button" />
+
+</form>

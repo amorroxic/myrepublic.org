@@ -1,0 +1,24 @@
+<h4>Login.</h4>
+<?php echo $this->render('my-account/submenu-notlogged.phtml'); ?>	
+
+<?php if(!empty($this->message)) :?>
+	<h6><?php echo $this->escape($this->message);?></h6>
+<?php endif; ?>	
+
+<div class="clear"></div>
+
+<form action="<?php echo $this->l("my-account","login");?>" method="post">
+    
+    <label for="username">E-Mail Address</label><br/>
+    <input type="text" name="username" value=""/>
+	
+	<div class="clear"></div>
+
+    <label for="password">Password</label><br/>
+    <input type="password" name="password" value=""/>
+
+	<div class="clear"></div>
+	
+	<input type="submit" name="login" value="<?php echo $this->t("Autentificare");?>" class="button" />
+
+</form>

@@ -1,0 +1,20 @@
+<?php
+
+	$contentArray = array();
+	$contentArray[$this->language] = array();
+	$contentArray[$this->language]["body"] 	= $this->activePlace["name"];
+	$contentArray[$this->language]["id"] 	= $this->activePlace["id"];
+
+	$contentArrayC = array();
+	$contentArrayC[$this->language] = array();
+	$contentArrayC[$this->language]["body"] 	= $this->activeCountry["name"];
+	$contentArrayC[$this->language]["id"] 		= $this->activeCountry["id"];
+
+?>
+
+	<span><a title="Larger size images from <?=$this->activePlace["name"];?>, <?=$this->activeCountry["name"];?>" href="<?php echo $this->l("destinations","index",$contentArray);?>">Photos</a></span> / 
+	<span><a title="Browse all photos from <?=$this->activePlace["name"];?>, <?=$this->activeCountry["name"];?>" href="<?php echo $this->l("destinations","thumbnails",$contentArray);?>">Thumbnails</a></span> / 
+	<span><a title="Travel opinions on <?=$this->activePlace["name"];?>, <?=$this->activeCountry["name"];?>" href="<?php echo $this->l("destinations","opinions",$contentArray);?>">Travel opinions</a></span> / 
+	<span><a title="Check out more destinations from <?=$this->activeCountry["name"];?>" href="<?php echo $this->l("countries","index",$contentArrayC);?>">More from <?php echo $this->activeCountry["name"];?></a></span> / 
+
+	<div class="clear top_20"></div>

@@ -1,0 +1,19 @@
+<h4>Recover your password.</h4>
+<?php echo $this->render('my-account/submenu-notlogged.phtml'); ?>	
+
+<?php if(!empty($this->message)) :?>
+<h6><?php echo $this->escape($this->message);?></h6>
+<?php endif; ?>	
+
+<div class="clear"></div>
+
+<form action="<?php echo $this->l("my-account","recover");?>" method="post">
+
+<label for="email">E-Mail Address</label><br/>
+<input type="text" name="email" value=""/>
+
+<div class="clear"></div>
+
+<input type="submit" name="login" value="<?php echo $this->t("Reset password");?>" class="button" />
+
+</form>

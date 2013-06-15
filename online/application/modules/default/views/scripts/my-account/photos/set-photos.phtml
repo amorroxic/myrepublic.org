@@ -1,0 +1,20 @@
+	<ul id="selectable" class="selectable">
+
+<?php
+	if (isset($this->photos) && count($this->photos) > 0) {
+		foreach ($this->photos as $photo) {
+		
+		$class="";
+		if ($photo["added"] == "1") $class="ui-selected";
+		
+	?>
+			<li rel="<?=$photo["id"];?>" class="<?=$class;?>">
+	    	<div class="thumbnail-wrapper">
+	    		<a><div class="image" style="background-image: url('<?=$photo["thumb"];?>')"></div></a>
+	    	</div>
+	    	</li>
+	<?php
+		}
+	}
+	?>
+ 	</ul>

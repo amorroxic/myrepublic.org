@@ -1,0 +1,47 @@
+<div class="full_length height_100" id="head_full">
+
+	<div class="container_16 height_100" id="head">
+
+		<div class="grid_4 height_40"></div>
+		<div class="grid_1 height_40"></div>
+		<div class="grid_11 top_40"></div>
+		
+		<div class="clear"></div>
+	
+		<div class="grid_4 height_60">&nbsp;</div>
+		<div class="grid_1 height_60">&nbsp;</div>
+		<div class="grid_11">
+			<ul class="main-menu">
+			<?php if ($this->controller == "index") { $active = "active"; } else { $active = ""; } ?>
+			<li><h6 class="menu <?php echo $active;?>"><a title="Back to the homepage" href="<?php echo $this->l();?>">Home</a></h6></li>
+			<?php if ($this->controller == "about") { $active = "active"; } else { $active = ""; } ?>
+			<li><h6 class="menu <?php echo $active;?>"><a title="About the project" href="<?php echo $this->l("about");?>">About</a></h6></li>
+
+			<?php if (Authentication_Manager::isAllowed()) { ?>
+			
+			<?php if ($this->controller == "my-account") { $active = "active"; } else { $active = ""; } ?>
+			
+			<li><h6 class="menu <?php echo $active;?>"><a title="Upload your photos or manage your favorite destinations" href="<?php echo $this->l("my-account","photos");?>">My account</a></h6></li>
+			<?php if ($this->controller == "-") { $active = "active"; } else { $active = ""; } ?>
+			<li><h6 class="menu <?php echo $active;?>"><a href="<?php echo $this->l("my-account","logout");?>">Logout</a></h6></li>
+			
+			<?php } else { ?>
+			
+			<?php if ($this->controller == "my-account") { $active = "active"; } else { $active = ""; } ?>
+			<li><h6 class="menu <?php echo $active;?>"><a title="Login to upload photos or manage your favorite destinations" href="<?php echo $this->l("my-account","login");?>">Login</a></h6></li>
+			<?php }	?>
+			
+			<?php if ($this->controller == "contact") { $active = "active"; } else { $active = ""; } ?>
+			<li><h6 class="menu <?php echo $active;?>"><a title="Contact us" href="<?php echo $this->l("contact");?>">Contact</a></h6></li>
+			</ul>
+		<div class="clear"></div>
+
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+<div class="container_16">
+		<div class="grid_16 height_40">&nbsp;</div>
+</div>

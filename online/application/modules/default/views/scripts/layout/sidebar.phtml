@@ -1,0 +1,60 @@
+<?php
+if (isset($this->places)) {
+?>
+<h4 class="subheader"><?php echo $this->activeCountry["name"];?></h4>
+<div class="hr"><hr/></div>
+<ul class="left-menu">
+	<?php
+	foreach ($this->places as $place) {
+
+		$contentArray = array();
+		$contentArray[$this->language] = array();
+		$contentArray[$this->language]["body"] 	= $place["name"];
+		$contentArray[$this->language]["id"] 	= $place["id"];
+		$contentLink = $this->l("destinations","index",$contentArray);
+		
+		if ($place["id"] == $this->activePlace["id"]) {
+			echo '<li class="selected">'.$place["name"].'</li>';
+		} else {
+			echo '<li><a href="'.$contentLink.'">'.$place["name"].'</a></li>';
+		}
+	}
+	?>
+	<li class="system"><a href="">Cutest destinations</a></li>
+	<li class="system"><a href="">Newest added</a></li>
+	<li class="system"><a href="">Random location</a></li>
+</ul>
+<?php
+}
+if (isset($this->countries)) {
+?>
+<h4 class="subheader">By country</h4>
+<div class="hr"><hr/></div>
+<ul class="left-menu">
+	<?php
+	foreach ($this->countries as $country) {
+	
+		$contentArray = array();
+		$contentArray[$this->language] = array();
+		$contentArray[$this->language]["body"] 	= $country["name"];
+		$contentArray[$this->language]["id"] 	= $country["id"];
+		$contentLink = $this->l("countries","index",$contentArray);
+	
+		if ($country["id"] == $this->activeCountry["id"]) {
+			echo '<li class="selected">'.$country["name"].'</li>';
+		} else {
+			echo '<li><a href="'.$contentLink.'">'.$country["name"].'</a></li>';
+		}
+	}
+	?>
+</ul>
+<?php
+}
+?>
+<h4 class="subheader">Worldwide</h4>
+<div class="hr"><hr/></div>
+<ul class="left-menu">
+	<li><a href="">Coolest places</a></li>
+	<li><a href="">Newest added</a></li>
+	<li><a href="">Random location</a></li>
+</ul>

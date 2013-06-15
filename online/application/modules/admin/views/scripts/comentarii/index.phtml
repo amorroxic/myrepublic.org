@@ -1,0 +1,105 @@
+<?php
+	$cauta = "";
+	if (isset($this->queryParams["cauta"])) $cauta = $this->queryParams["cauta"];
+
+?>
+<div class="cA column noprint" id="cA">
+		
+		<ul class="menu">
+			<li><strong>Filtre</strong><br/><br/></li>
+			<li <?php if ($this->filtru == 'neaprobate') echo 'class="parent"';?>><a href='/admin/comentarii/index/page/<?=$this->page;?>/filtru/neaprobate'>Neaprobate</a></li>			
+			<li <?php if ($this->filtru == 'toate') echo 'class="parent"';?>><a href='/admin/comentarii/index/page/<?=$this->page;?>/filtru/toate'>Toate</a></li>
+			
+			<li>
+			<br/>
+			<strong>Cautare</strong>
+			<br/><br/>
+			<form action="/admin/comentarii" method="get">
+			<input type='text' name='cauta' style="width: 95px;" value="<?=$cauta;?>"/>
+			<input type='hidden' name='page' value="<?=$this->page;?>"/>
+			<input type='hidden' name='filtru' value="<?=$this->filtru;?>"/>
+			<br/><br/>
+			<input type="submit" value="Cauta"/>
+			</form>
+			<br/><br/>
+			</li>			
+						
+		</ul>		
+		
+		<hr class="largeBreak"/>
+</div>
+			
+<hr class="noscreen noprint" />
+			
+<div class="cB column">
+	
+	<div class="content-inner-left">
+
+				<ul id="tabs_example_one" class="subsection_tabs">  
+				    <li class="tab"><a href="#comentarii">Comentarii</a></li>  
+				</ul>  
+				
+				<div id="comentarii">
+					<br/>
+					<?php
+						foreach ($this->comments as $comment) {
+
+							$username = $comment["name"];
+
+							$contentLink = "/ro/categories/".$comment["gallery_id"]."/".ereg_replace("[^A-Za-z0-9]", "-", $username);
+							$contentLink = strtolower($contentLink);
+												
+							?>
+							
+						<div class="user clear" style="background: #fff">
+						
+							<div style="width: 620px; float:left;">
+								Nume: <?=$comment["name"];?><br/>
+								E-Mail: <?=$comment["email"];?><br/>
+								Data: <?=$comment["published"];?><br/>
+								Mesaj: <?=nl2br(addslashes($comment["comment"]));?><br/><br/>
+							</div>
+							
+								<div class='left'>
+									<form action="/admin/comentarii/aproba/" method="post" onsubmit="return userConfirm('Aprobati comentariul?',this)">
+									<input type="hidden" name="id" value="<?=$comment["id"];?>"/>
+									<input type="hidden" name="filtru" value="<?=$this->filtru;?>"/>
+									<input type="hidden" name="page" value="<?=$this->page;?>"/>
+									<input type="hidden" name="message"/>
+									<input type="submit" value="Aproba" style="width:80px;"/><br/>
+									</form>
+<br/>
+									<form action="/admin/comentarii/sterge/" method="post" onsubmit="return userConfirm('Stergeti comentariul?',this)">
+									<input type="hidden" name="id" value="<?=$comment["id"];?>"/>
+									<input type="hidden" name="filtru" value="<?=$this->filtru;?>"/>
+									<input type="hidden" name="page" value="<?=$this->page;?>"/>
+									<input type="hidden" name="message"/>
+									<input type="submit" value="Sterge" style="width:80px;"/><br/>
+									</form>
+								</div>							
+							
+						</div>							
+						<div class="separator-nomargin"><hr/></div>			
+							
+							<?php
+						}					
+					?>
+					
+					<?php
+
+						echo $this->paginationControl($this->paginator, 'Sliding', 'comentarii/comentarii-paginator.phtml',array('query'=>$this->queryParams));
+
+					?>
+						<div class="clear">&nbsp;</div>				
+
+				</div>
+		
+	</div><!-- content-inner-left -->
+
+</div><!-- cB column -->
+<div id="window_feedback"></div>
+<div id="feedback" style="display:none">
+<br/>Mesaj:<br/><br/>
+<textarea id="feedback_message" style="width:300px;height:100px;" onkeyup="checkFeedbackText()"></textarea><br/><br/>
+<input type="button" value="Trimite (fara feedback)" id="feedback_button" onclick="userConfirmFeedback()"/>
+</div>

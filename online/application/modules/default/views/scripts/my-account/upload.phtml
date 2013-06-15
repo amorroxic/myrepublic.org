@@ -1,0 +1,140 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/uploadify/default.css', 'screen,projection');                 
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/uploadify/uploadify.css', 'screen,projection');                 
+$this->headScript()->appendFile($this->baseURL() . '/javascript/uploadify/swfobject.js');
+$this->headScript()->appendFile($this->baseURL() . '/javascript/uploadify/jquery.uploadify.v2.1.0.js');
+?>
+<script type="text/javascript">
+	var filesToBeUploaded;
+	
+	function addFileStatus(filename, status) {
+		var newFile = new Array();
+		newFile["name"] = filename;
+		newFile["status"] = status;
+		filesToBeUploaded.push(newFile);
+	}
+	
+	function displayFiles() {
+		var i;
+		$('#upload_success').append("<div class='clear top_20'></div>");
+		
+		for (i=0;i<filesToBeUploaded.length;i++) {
+			if (filesToBeUploaded[i]["status"] == "failed") {
+				$('#upload_success').append("<div class='grid_5 alpha' style='border-bottom:1px solid #f7f7f7'>"+filesToBeUploaded[i]["name"]+"</div><div class='grid_1' style='border-bottom:1px solid #f7f7f7'><span style='color:#f00'>"+filesToBeUploaded[i]["status"]+"</span></div>");
+			} else {
+				$('#upload_success').append("<div class='grid_5 alpha' style='border-bottom:1px solid #f7f7f7'>"+filesToBeUploaded[i]["name"]+"</div><div class='grid_1' style='border-bottom:1px solid #f7f7f7'>"+filesToBeUploaded[i]["status"]+"</div>");
+			}
+			$('#upload_success').append("<div class='clear'></div>");
+		}
+		$('#upload_success').append("<div class='clear'></div>");
+		
+	}
+	
+	function resetStatus() {
+		filesToBeUploaded = new Array();
+	}
+	
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+	$("#uploadify").uploadify({
+		'uploader'       : '/javascript/uploadify/uploadify.swf',
+		'script'         : '/ro/my-account/incoming',
+		'scriptData'	 : {'s':'<?php echo $this->sessionID;?>','country':$('#country').val(),'destination':$('#destination').val()},
+		'cancelImg'      : '/javascript/uploadify/cancel.png',
+        'fileDesc'		 : 'Image Files',
+        'fileExt'		 : '*.jpg;*.png;*.gif;*.jpeg',
+		'folder'         : '',
+		'queueID'        : 'fileQueue',
+		'auto'           : false,
+		'multi'          : true,
+		'buttonImg'		 : '/images/layout/boxes/browse.jpg',
+        'onOpen'	 	 : function(event, queueID, fileObj) {
+					
+       					   },
+        'onComplete'	 : function(event, queueID, fileObj, response, data) {
+								try {
+									var obj = jQuery.parseJSON(response);
+									if (obj.status === false) {
+										//alert("Error processing: "+obj.message);
+										addFileStatus(fileObj.name,"failed");
+									} else {
+										addFileStatus(fileObj.name,"online");
+									}
+								} catch (err) {
+									addFileStatus(fileObj.name,"failed");
+									//alert("There was a problem with this file.");
+								}
+       					   },
+       	'onError'		 : function(event, queueID, fileObj, errorObj) {
+       								addFileStatus(fileObj.name,"failed");
+       					   },
+		'onAllComplete'	 : function(event, data) {
+									
+								  $('#no_files_uploaded').text(data.filesUploaded);	
+								  displayFiles();	
+								  $('#upload_area').hide('slow', function() {
+								    jQuery("#upload_success").show();
+								  });
+										
+										
+						   }    					   
+       					  
+	});
+	
+	$('#country').bind("change",function(){
+		$('#uploadify').uploadifySettings('scriptData', {'country' : $('#country').val()});
+	});
+
+	$('#destination').bind("change",function(){
+		$('#uploadify').uploadifySettings('scriptData', {'destination' : $('#destination').val()});
+	});
+
+});
+</script>		
+
+<h4>Upload new photos.</h4>
+<?php echo $this->render('my-account/submenu-logged.phtml'); ?>	
+
+<div id="upload_area">
+<h6>1. Where are your pictures from?</h6>
+		
+<div class="clear"></div>
+
+<div class="grid_1 alpha top_10">Country</div>
+
+<div class="grid_3">
+	<select name="country" id="country">
+	<?php
+		foreach ($this->allCountries as $country) {
+			echo "<option value='".$country["id"]."'>".$country["name"]."</option>";	
+		}
+	?>
+	</select>
+</div>
+
+
+<div class="grid_1 top_10">Location</div>
+
+<div class="grid_4">
+	<input type="text" name="destination" id="destination"/>
+</div>
+
+<div class="clear top_60"></div>
+	
+<h6>2. Choose images (<a href="javascript:jQuery('#uploadify').uploadifyClearQueue()">cancel all uploads</a>)</h6>
+
+<div id="fileQueue"></div>
+<input type="file" name="uploadify" id="uploadify" />
+<div class="clear"></div>
+<input type="button" class="button" value="Send images" onclick="if (jQuery('#destination').val() != '') { resetStatus(); jQuery('#uploadify').uploadifyUpload(); } else { alert('Please specify a location.'); jQuery('#destination').focus(); }"/>
+
+<div id="debug"></div>
+</div>
+<div id="upload_success" style="display:none;">
+<span id="no_files_uploaded"></span> files were sent.
+</div>
+

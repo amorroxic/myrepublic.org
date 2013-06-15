@@ -1,0 +1,54 @@
+<?php
+if (isset($this->places)) {
+?>
+			<h4><span><?php echo $this->activeCountry["name"];?>.</span></h4>
+			
+			<?php foreach ($this->places as $place) {
+			
+				$contentArray = array();
+				$contentArray[$this->language] = array();
+				$contentArray[$this->language]["body"] 	= $place["name"];
+				$contentArray[$this->language]["id"] 	= $place["id"];
+				$contentLink = $this->l("destinations","index",$contentArray);
+				if ($place["id"] == $this->activePlace["id"]) {
+					$class="selected";
+				} else {
+					$class="";
+				}
+			?>
+				<span><a class="<?php echo $class;?>" title="Travel photos from <?php echo $place["name"];?>" href="<?php echo $contentLink;?>"><?php echo $place["name"];?></a></span> / 
+			<?php } ?>
+			
+			<div class="top_40 clear"></div>
+<?php } ?>
+
+<?php if (isset($this->countries)) { ?>
+
+			<h4><span>Countries.</span></h4>
+			
+			<?php
+			foreach ($this->countries as $country) {
+			
+				$contentArray = array();
+				$contentArray[$this->language] = array();
+				$contentArray[$this->language]["body"] 	= $country["name"];
+				$contentArray[$this->language]["id"] 	= $country["id"];
+				$contentLink = $this->l("countries","index",$contentArray);
+			
+				if ($country["id"] == $this->activeCountry["id"]) {
+					$class="selected";
+				} else {
+					$class="";
+				}
+			?>
+			
+				<span><a title="Browse all destinations from <?php echo $country["name"];?>" class="<?php echo $class;?>" href="<?php echo $contentLink;?>"><?php echo $country["name"];?></a></span> / 
+			<?php }	?>
+			
+			<div class="top_40 clear"></div>
+<?php } ?>
+
+			<h4><span>Worldwide.</span></h4>
+			<span><a title="Coolest destinations worldwide. Based on your feedback." href="<?php echo $this->l("coolest");?>">Coolest places</a></span> / 
+			<span><a title="Newest destinations added in our system" href="<?php echo $this->l("newest");?>">Newest added</a></span> / 
+			<span><a title="See photos from a random location" href="<?php echo $this->l("random");?>">Random location</a></span> / 

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+var runAfter = "refreshUserPhotos";
+var runParams = {"id":<?=$this->id;?>, "page":<?=$this->page;?>};
+</script>
+<?=$this->render("photos/jquery-ui.phtml");?>
+<?php
+	$users = $this->users->getCurrentItems();
+	if (count($users)>0) {
+		$user = $users[0];
+	} else {
+		$user = array();
+	}
+?>
+<h4>Photos uploaded by <span class="color_magenta"><?=$user["first_name"]." ".$user["last_name"]." - ".$user["email"];?></span>.</h4>
+<?=$this->render("photos/photo-list.phtml");?>

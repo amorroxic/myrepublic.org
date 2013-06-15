@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteCond %{http_host} ^myrepublic\.org [NC]
+RewriteRule (.*) http://www.myrepublic.org/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !/javascript.*
+RewriteRule !\.(js|ico|gif|jpg|png|css|swf|xls|html|xml|txt|flv)$ index.php
+
+<IfModule mod_php5.c>
+php_value upload_max_filesize "25M"
+php_value post_max_size "25M"
+php_value open_basedir none
+</IfModule>

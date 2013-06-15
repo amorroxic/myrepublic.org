@@ -1,0 +1,80 @@
+<?php
+
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/global/content.css', 'screen,projection');                 
+
+?>
+
+<div class="cA column noprint" id="cA">
+		
+		<ul class="menu">
+		</ul>
+		<hr class="largeBreak"/>
+</div>
+			
+<hr class="noscreen noprint" />
+			
+<div class="cB column">
+	
+	<div class="content-inner-left">
+	
+
+
+						<form action="/admin/galerii/save-import" enctype="multipart/post-data" method="post">
+						
+						<input type="hidden" name="gallery-id" value="<?=$this->galleryID;?>"/>
+						<input type="hidden" name="image-count" value="<?=count($this->photos);?>"/>
+						
+						<div class="left">
+							<div class="quote">
+
+								<blockquote>
+									<div class="inner">
+										Fotografii
+									</div>
+								</blockquote>
+							</div>				
+							Galerie: <strong><?=$this->galleryName;?></strong><br/>
+						
+						</div>			
+						
+						<div class="clear">&nbsp;</div>		
+						<table style="width:680px">
+							<tr style="alt2">
+								<td>Imagine</td>
+								<td>Titlu</td>
+								<td>Descriere</td>
+							</tr>
+							<?php
+								$count = 0;
+								foreach ($this->photos as $photo) {
+									if ($count % 2 == 0) {
+										$class=" class='alt'";
+									} else {
+										$class="";
+									}
+							?>
+							
+								<tr <?=$class;?>>
+									<td>
+										<img src="<?=$photo["thumb"];?>"/>
+										<input type="hidden" name="image_<?=$count;?>" value="<?=$photo["image"];?>"/>																<input type="hidden" name="thumb_<?=$count;?>" value="<?=$photo["thumb"];?>"/>															</td>
+									<td><input type="text" name="title_<?=$count;?>"/></td>
+									<td><input type="text" name="description_<?=$count;?>"/></td>
+								</tr>
+							
+							<?php
+								$count++;
+								}
+							?>
+						</table>
+						
+						<input type="submit" value="Salveaza fotografiile in galeria <?=$this->galleryName;?>"/>
+						<div class="clear">&nbsp;</div>		
+						<br/><br/>
+						
+					</form>		
+						
+		
+	</div><!-- content-inner-left -->
+
+</div><!-- cB column -->		

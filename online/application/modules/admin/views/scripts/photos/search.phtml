@@ -1,0 +1,7 @@
+<script type="text/javascript">
+var runAfter = "refreshSearchPhotos";
+var runParams = {"search":"<?=$this->search;?>", "search_for":"<?=$this->searchFor;?>", "page":<?=$this->page;?>};
+</script>
+<?=$this->render("photos/jquery-ui.phtml");?>
+<h4>Searched for <span class="color_magenta"><?=$this->search;?></span> in <?=$this->searchFor;?>.</h4>
+<?=$this->render("photos/photo-list.phtml");?>

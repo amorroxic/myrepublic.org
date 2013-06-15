@@ -1,0 +1,38 @@
+<script type="text/javascript">
+var runAfter = "refreshCountry";
+var runParams = {"country":<?=$this->country["id"];?>,"page":<?=$this->page;?>};
+</script>
+<?=$this->render("photos/jquery-ui.phtml");?>
+<h4>Photos from <span class="color_magenta"><?=$this->country["name"];?>.</span></h4>
+<?=$this->render("photos/photo-list.phtml");?>
+
+
+<div class="clear"></div>
+
+<div class="grid_11 top_40 alpha">
+
+<h4>Other locations from <span class="color_magenta"><?=$this->country["name"];?>.</span></h4>
+<ul class="left-menu">
+<?php
+$i = 0;
+if (isset($this->country["places"])) {
+
+foreach ($this->country["places"] as $place) {
+	$i++;
+	if ($i%2 == 0) {
+		$class="odd";
+	} else {
+		$class="even";
+	}
+	?>
+	<li class="<?=$class;?>"><a href="/admin/photos/locations/destination/<?=$place["id"];?>"><?=$place["name"];?></a></li>
+	<?php
+}
+
+} else {
+	echo "<li>None found.</li>";
+}
+?>
+</ul>
+
+</div>

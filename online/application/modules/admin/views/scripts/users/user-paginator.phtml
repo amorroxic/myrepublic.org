@@ -1,0 +1,66 @@
+<?php
+
+function getLink($action,$params) {
+
+$url = $action."?";
+$parameters = array();
+foreach ($params as $key=>$value) {
+	$parameters[] = $key."=".$value;
+}
+$url .= join("&",$parameters);
+return $url;
+}
+
+?>
+
+
+<?php if ($this->pageCount): ?> 
+<div id="paginationControl">
+Users <?= $this->firstItemNumber; ?> - <?= $this->lastItemNumber; ?> from <?= $this->totalItemCount; ?> | 
+
+<a href="<?= getLink($this->backlink,array('page' => $this->first)); ?>">first page</a> | 
+
+<!-- Previous page link -->
+<?php if (isset($this->previous)): ?>
+  <a href="<?= getLink($this->backlink,array('page' => $this->previous)); ?>">back</a> |
+<?php else: ?>
+  <span class="disabled">back</span> |
+<?php endif; ?> 
+
+<?php
+foreach ($this->pagesInRange as $page) {
+?>
+<?php
+if ($this->current != $page) {
+?>
+	<a href="<?= getLink($this->backlink,array('page' => $page)); ?>"><?= $page; ?></a> 
+<?php	
+} else {
+	echo $page;
+}
+}
+
+if ($this->lastPageInRange < $this->last) {
+
+	echo ".. ";
+?>	
+	<a href="<?= getLink($this->backlink,array('page' => $this->last)); ?>"><?= $this->last; ?></a>
+<?
+}
+
+?>
+
+ | 
+
+<!-- Next page link -->
+<?php if (isset($this->next)): ?>
+  <a href="<?= getLink($this->backlink,array('page' => $this->next)); ?>">next</a> |
+<?php else: ?>
+  <span class="disabled">next</span> |
+<?php endif; ?>
+
+<a href="<?= getLink($this->backlink,array('page' => $this->last)); ?>">last page</a><br/>
+
+</div>
+
+<?php endif; ?>

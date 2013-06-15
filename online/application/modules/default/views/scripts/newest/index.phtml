@@ -1,0 +1,31 @@
+<h4>Newest destinations.</h4>
+
+<?php
+for ($i=0;$i<count($this->destinations);$i++) {
+$country = $this->destinations[$i];
+?>
+
+<div class="grid_3 alpha right_40">
+	
+	<ul class="left-menu">
+		<?php
+
+		echo '<li class="title">'.$country["name"].'</li>';
+
+		foreach ($country["places"] as $place) {
+	
+			$contentArray = array();
+			$contentArray[$this->language] = array();
+			$contentArray[$this->language]["body"] 	= $place["name"];
+			$contentArray[$this->language]["id"] 	= $place["id"];
+			$contentLink = $this->l("destinations","index",$contentArray);
+			echo '<li><a title="Check out new photos from '.$place["name"].", ".$country["name"].'" href="'.$contentLink.'">'.$place["name"].'</a></li>';
+		}
+		?>
+	</ul>
+	
+</div>
+
+<?php
+}
+?>

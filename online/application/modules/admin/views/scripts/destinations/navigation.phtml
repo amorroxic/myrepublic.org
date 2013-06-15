@@ -1,0 +1,28 @@
+<?php
+$action = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+$action = strtolower($action);
+?>
+
+<h4>Actions</h4>
+<ul class="left-menu">
+<?php if ($action == "countries" && $this->full=="1") { $active = "active"; } else { $active = ""; } ?>
+<li><a class="<?php echo $active;?>" href="/admin/destinations/countries/full/1">Countries</a>
+ / 
+<?php if ($action == "countries" && $this->full=="0") { $active = "active"; } else { $active = ""; } ?>
+<a class="<?php echo $active;?>" href="/admin/destinations/countries">having locations</a></li>
+<?php if ($action == "locations") { $active = "active"; } else { $active = ""; } ?>
+<li><a class="<?php echo $active;?>" href="/admin/destinations/locations">Locations</a></li>
+<?php if ($action == "opinions") { $active = "active"; } else { $active = ""; } ?>
+<li><a class="<?php echo $active;?>" href="/admin/destinations/opinions">Opinions</a></li>
+</ul>
+
+<h4>Search</h4>
+
+
+<form action="/admin/destinations/search" method="post">
+    
+    <input type="text" name="search" value="<?=$this->search;?>"/>
+	<div class="clear"></div>
+	<input type="submit" name="submit" value="Search" class="button" />
+
+</form>

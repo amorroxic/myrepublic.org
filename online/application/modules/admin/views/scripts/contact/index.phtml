@@ -1,0 +1,72 @@
+<div class="cA column noprint" id="cA">
+		
+		<ul class="menu">
+			<li>
+			<strong>Statistica</strong>
+			<br/><br/>
+			Avem <?=count($this->contacts);?> mesaje.
+			</li>
+		</ul>		
+		
+		<hr class="largeBreak"/>
+</div>
+			
+<hr class="noscreen noprint" />
+			
+<div class="cB column">
+	
+	<div class="content-inner-left">
+
+				<ul id="tabs_example_one" class="subsection_tabs">  
+				    <li class="tab"><a href="#mesaje">Mesaje</a></li>  
+				</ul>  
+				
+				<div id="mesaje">
+					<br/>
+					<?php
+						foreach ($this->contacts as $contact) {
+					?>
+						<div class="user clear" style="background: #f0f0f0; height: 30px">
+							<div class="left" style="padding-top: 8px; padding-left: 10px">
+								<?=$contact["nume"];?>
+							</div>
+							<div class="right">
+								<input type="button" value="Sterge" onclick="$('delete-<?=$contact["id"];?>').show()"/>
+								<input type="button" value="Detalii" onclick="$('mesaj-<?=$contact["id"];?>').show()"/>
+							</div>
+						</div>
+
+
+						<div class="user clear" style="background: #fff;display:none;" id="delete-<?=$contact["id"];?>">
+							<div style="margin-left:10px; margin-top:10px;">
+								<input type="button" value="Confirma stergerea" onclick="window.location.href='<?=$this->url(array("sterge"=>$contact["id"]));?>';"/>
+								<input type="button" value="Renunta" onclick="$('delete-<?=$contact["id"];?>').hide()"/>
+							</div>
+						</div>
+
+
+						<div class="user clear" style="background: #fff;display:none;" id="mesaj-<?=$contact["id"];?>">
+							<div style="margin-left:10px; margin-top:10px;">
+								Subiect: <?=$contact["subiect"];?><br/>
+								E-Mail: <?=$contact["email"];?><br/>
+								Data: <?=$contact["data"];?><br/>
+								Mesaj: <?=$contact["mesaj"];?><br/><br/>
+								<input type="button" value="Inchide detaliile" onclick="$('mesaj-<?=$contact["id"];?>').hide()"/>
+							</div>
+						</div>
+
+
+						
+						<div class="separator-nomargin"><hr/></div>
+					<?		
+						}
+
+					echo $this->paginationControl($this->paginator, 'Sliding', 'contact/paginator.phtml',array());
+
+					?>
+
+				</div>
+		
+	</div><!-- content-inner-left -->
+
+</div><!-- cB column -->

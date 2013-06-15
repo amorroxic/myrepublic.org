@@ -1,0 +1,67 @@
+<?php
+
+$this->headScript()->appendFile($this->baseURL() . '/javascript/tiny_mce/tiny_mce_src.js');
+$this->headScript()->appendFile($this->baseURL() . '/javascript/tiny_mce/init_tiny_mce.js');
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/global/content.css', 'screen,projection');                 
+
+?>
+
+<div class="cA column noprint" id="cA">
+		
+		<ul class="menu">
+			<li>
+			<strong>Statistica</strong>
+			<br/><br/>
+			Avem <?=count($this->emails);?> adrese de e-mail inscrise la newsletter.
+			</li>
+		</ul>		
+		
+		<hr class="largeBreak"/>
+</div>
+			
+<hr class="noscreen noprint" />
+			
+<div class="cB column">
+	
+	<div class="content-inner-left">
+
+				<ul id="tabs_example_one" class="subsection_tabs">  
+				    <!--li class="tab"><a href="#lista">Lista adrese e-mail</a></li-->  
+				    <li class="tab"><a href="#send_newsletter">Trimite newsletter</a></li>  
+				</ul>  
+				
+				<!--div id="lista">
+					<br/>
+					Lista de adrese inscrise<br/><br/>
+					
+					<textarea style="margin:0.0em 0;width:600px;height:300px;border:1px solid #bbb;"><?php
+						foreach($this->emails as $email) {
+							echo $email["email"]."\n";
+						}
+					?></textarea>
+					
+					<div class="separator-nomargin"><hr/></div>
+										
+				</div-->
+				
+				<div id="send_newsletter">
+					<br/>
+					<form action="/admin/newsletter/trimite" onsubmit="return newsletterCheck()" method="post">
+					<input type="checkbox" name="subscribers" id="subscribers" value="ON"/>&nbsp;Catre utilizatori website&nbsp;&nbsp;&nbsp;<input type="checkbox" name="newsletter" id="newsletter" value="ON"/>&nbsp;Catre abonati newsletter<br/>
+					<div class="clear">&nbsp;</div>
+					Subiect:<br/><input type="text" id="subiect" name="subiect" size="60"/><br/>
+					<div class="clear">&nbsp;</div>					
+	
+					<div class="left">					
+					<textarea id="newsletter_content" name="newsletter_content" rows="15" cols="80" style="width: 80%">
+					</textarea>	
+					</div>
+					<div class="clear">&nbsp;</div>
+					<input class="noborder" type="image" src="/images/buttons/trimite-off.jpg" onmouseover="this.src='/images/buttons/trimite-on.jpg'" onmouseout="this.src='/images/buttons/trimite-off.jpg'"/>
+					</form>
+															
+				</div>				
+		
+	</div><!-- content-inner-left -->
+
+</div><!-- cB column -->

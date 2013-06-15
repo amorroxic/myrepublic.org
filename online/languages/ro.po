@@ -1,0 +1,1451 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dan Dinu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-24 22:43+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Noua Uzina <contact@nouauzina.ro>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: /Users/amo/Personal/Sites/dandinu.dev/application-dandinu/modules/default\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-SearchPath-0: ./views/scripts/controllers\n"
+"X-Poedit-SearchPath-1: ./views/scripts/index\n"
+"X-Poedit-SearchPath-2: ./views/scripts/sidebar\n"
+"X-Poedit-SearchPath-3: ./views/scripts/layout\n"
+"X-Poedit-SearchPath-4: ./views/scripts/auth\n"
+"X-Poedit-SearchPath-5: ./views/scripts/partners\n"
+"X-Poedit-SearchPath-6: ./controllers\n"
+"X-Poedit-SearchPath-7: ./views/helpers\n"
+"X-Poedit-SearchPath-8: ./views/scripts/contentblocks/boxes\n"
+"X-Poedit-SearchPath-9: ./views/scripts/contentblocks/gallery\n"
+"X-Poedit-SearchPath-10: ./views/scripts/article\n"
+"X-Poedit-SearchPath-11: ./views/scripts/author\n"
+"X-Poedit-SearchPath-12: ./views/scripts/categories\n"
+"X-Poedit-SearchPath-13: ./views/scripts/contact\n"
+"X-Poedit-SearchPath-14: ./views/scripts/editorial\n"
+"X-Poedit-SearchPath-15: ./views/scripts/error\n"
+"X-Poedit-SearchPath-16: ./views/scripts/news\n"
+"X-Poedit-SearchPath-17: ./views/scripts/usage\n"
+"X-Poedit-SearchPath-18: ./views/scripts/projects\n"
+
+#: controllers/ArticleController.php:42
+#: controllers/ContactController.php:28
+msgid "Va rugam completati-va numele"
+msgstr "Va rugam completati-va numele"
+
+#: controllers/ArticleController.php:43
+#: controllers/ContactController.php:29
+msgid "Adresa de email nu este valida"
+msgstr "Adresa de email nu este valida"
+
+#: controllers/ArticleController.php:44
+#: controllers/ContactController.php:30
+msgid "Va rugam completati mesajul"
+msgstr "Va rugam completati mesajul"
+
+#: controllers/NewsletterController.php:57
+msgid "Adresa de email nu era abonata la newsletter"
+msgstr "Adresa de email nu era abonata la newsletter"
+
+#: controllers/NewsletterController.php:62
+msgid "Adresa a fost dezabonata de la newsletter"
+msgstr "Adresa a fost dezabonata de la newsletter"
+
+#: controllers/NewsletterController.php:69
+msgid "Aceasta adresa de email este deja abonata la newsletter"
+msgstr "Aceasta adresa de email este deja abonata la newsletter"
+
+#: controllers/NewsletterController.php:77
+msgid "Ati fost abonat la newsletter"
+msgstr "Ati fost abonat la newsletter"
+
+#: views/helpers/Gallery.php:29
+msgid "Nu exista fotografii personale"
+msgstr "Nu exista fotografii personale"
+
+#: views/helpers/HandleLinkedResource.php:20
+msgid "Fotografii"
+msgstr "Fotografii"
+
+#: views/helpers/HandleLinkedResource.php:23
+msgid "Diaporama"
+msgstr "Diaporama"
+
+#: views/helpers/HandleLinkedResource.php:26
+msgid "Download"
+msgstr "Download"
+
+#: views/scripts/controllers/dummy.phtml:5
+msgid "index"
+msgstr "index"
+
+#: views/scripts/controllers/dummy.phtml:6
+msgid "news"
+msgstr "stiri"
+
+#: views/scripts/controllers/dummy.phtml:7
+msgid "recommendation"
+msgstr "recomandare"
+
+#: views/scripts/controllers/dummy.phtml:8
+msgid "request"
+msgstr "cerere"
+
+#: views/scripts/controllers/dummy.phtml:9
+msgid "about-us"
+msgstr "despre-noi"
+
+#: views/scripts/controllers/dummy.phtml:10
+msgid "termeni"
+msgstr "termeni"
+
+#: views/scripts/controllers/dummy.phtml:11
+msgid "January"
+msgstr "Ianuarie"
+
+#: views/scripts/controllers/dummy.phtml:12
+msgid "February"
+msgstr "Februarie"
+
+#: views/scripts/controllers/dummy.phtml:13
+msgid "March"
+msgstr "Martie"
+
+#: views/scripts/controllers/dummy.phtml:14
+msgid "April"
+msgstr "Aprilie"
+
+#: views/scripts/controllers/dummy.phtml:15
+msgid "May"
+msgstr "Mai"
+
+#: views/scripts/controllers/dummy.phtml:16
+msgid "June"
+msgstr "Iunie"
+
+#: views/scripts/controllers/dummy.phtml:17
+msgid "July"
+msgstr "Iulie"
+
+#: views/scripts/controllers/dummy.phtml:18
+msgid "August"
+msgstr "August"
+
+#: views/scripts/controllers/dummy.phtml:19
+msgid "September"
+msgstr "Septembrie"
+
+#: views/scripts/controllers/dummy.phtml:20
+msgid "October"
+msgstr "Octombrie"
+
+#: views/scripts/controllers/dummy.phtml:21
+msgid "November"
+msgstr "Noiembrie"
+
+#: views/scripts/controllers/dummy.phtml:22
+msgid "December"
+msgstr "Decembrie"
+
+#: views/scripts/controllers/dummy.phtml:23
+msgid "photos"
+msgstr "fotografii"
+
+#: views/scripts/controllers/dummy.phtml:24
+msgid "forum"
+msgstr "forum"
+
+#: views/scripts/controllers/dummy.phtml:25
+msgid "partners"
+msgstr "parteneri"
+
+#: views/scripts/controllers/dummy.phtml:26
+msgid "article"
+msgstr "articol"
+
+#: views/scripts/controllers/dummy.phtml:27
+msgid "author"
+msgstr "autor"
+
+#: views/scripts/controllers/dummy.phtml:28
+msgid "categories"
+msgstr "categorii"
+
+#: views/scripts/controllers/dummy.phtml:29
+msgid "usage"
+msgstr "utilizare"
+
+#: views/scripts/controllers/dummy.phtml:30
+msgid "projects"
+msgstr "proiecte"
+
+#: views/scripts/index/index.phtml:3
+msgid "Discover your passion"
+msgstr "Discover your passion"
+
+#: views/scripts/index/index.phtml:27
+msgid "STIRI SI INFORMATII"
+msgstr "STIRI SI INFORMATII"
+
+#: views/scripts/index/index.phtml:45
+msgid "TOATE STIRILE"
+msgstr "TOATE STIRILE"
+
+#: views/scripts/sidebar/campus.phtml:12
+msgid "CAMPUS"
+msgstr "CAMPUS"
+
+#: views/scripts/sidebar/campus.phtml:14
+msgid "Home"
+msgstr "Acasa"
+
+#: views/scripts/sidebar/campus.phtml:15
+msgid "Fotografiile mele"
+msgstr "Fotografiile mele"
+
+#: views/scripts/sidebar/campus.phtml:16
+msgid "Membrii"
+msgstr "Membrii"
+
+#: views/scripts/sidebar/campus.phtml:18
+msgid "Discutii"
+msgstr "Discutii"
+
+#: views/scripts/sidebar/newsletter.phtml:5
+msgid "NEWSLETTER"
+msgstr "NEWSLETTER"
+
+#: views/scripts/sidebar/newsletter.phtml:11
+msgid "Abonare"
+msgstr "Abonare"
+
+#: views/scripts/sidebar/newsletter.phtml:12
+msgid "Dezabonare"
+msgstr "Dezabonare"
+
+#: views/scripts/sidebar/partners.phtml:3
+msgid "PARTENERI"
+msgstr "PARTENERI"
+
+#: views/scripts/sidebar/search.phtml:4
+msgid "CAUTARE"
+msgstr "CAUTARE"
+
+#: views/scripts/layout/footer.phtml:2
+msgid "HOME"
+msgstr "ACASA"
+
+#: views/scripts/layout/footer.phtml:2
+msgid "AUTHOR"
+msgstr "AUTOR"
+
+#: views/scripts/layout/footer.phtml:2
+msgid "EDITORIAL"
+msgstr "EDITORIAL"
+
+#: views/scripts/layout/footer.phtml:2
+msgid "PROJECTS"
+msgstr "PROIECTE"
+
+#: views/scripts/layout/footer.phtml:2
+msgid "USAGE"
+msgstr "UTILIZARE"
+
+#: views/scripts/layout/footer.phtml:2
+msgid "PARTNERS"
+msgstr "PARTENERI"
+
+#: views/scripts/layout/footer.phtml:2
+msgid "CONTACT"
+msgstr "CONTACT"
+
+#: views/scripts/partners/content-detail.phtml:7
+#: views/scripts/partners/index.phtml:4
+msgid "Partners"
+msgstr "Parteneri"
+
+#: views/scripts/partners/content-detail.phtml:7
+msgid "Inapoi"
+msgstr "Inapoi"
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:55
+msgid "SESIUNEA"
+msgstr "SESIUNEA"
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:59
+msgid "Incepe in"
+msgstr "Incepe in"
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:64
+msgid "mai sunt"
+msgstr "mai sunt"
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:65
+msgid "zile"
+msgstr "zile"
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:95
+msgid "Locuri"
+msgstr "Locuri"
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:105
+msgid "Taxa"
+msgstr "Taxa"
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:116
+msgid "mai multe informatii.."
+msgstr "mai multe informatii.."
+
+#: views/scripts/contentblocks/boxes/big-round.phtml:117
+msgid "INSCRIE-TE"
+msgstr "INSCRIE-TE"
+
+#: views/scripts/contentblocks/boxes/empty_brasov.phtml:3
+msgid "Niciun curs activ"
+msgstr "Niciun curs activ"
+
+#: views/scripts/contentblocks/boxes/empty_offline.phtml:3
+msgid "Niciun workshop activ"
+msgstr "Niciun workshop activ"
+
+#: views/scripts/contentblocks/boxes/my-offline-activities.phtml:92
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:173
+msgid "Status"
+msgstr "Status"
+
+#: views/scripts/contentblocks/boxes/my-offline-activities.phtml:102
+msgid "Mai multe informatii"
+msgstr "Mai multe informatii"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:49
+msgid "LECTII ACTIVE"
+msgstr "LECTII ACTIVE"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:88
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:89
+msgid "Lectii"
+msgstr "Lectii"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:94
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:95
+msgid "Teme"
+msgstr "Teme"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:98
+msgid "DISCUTII"
+msgstr "DISCUTII"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:100
+msgid "COLEGI"
+msgstr "COLEGI"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:122
+msgid "A inceput in"
+msgstr "A inceput in"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:137
+msgid "Expira in"
+msgstr "Expira in"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:183
+msgid "Teme rezolvate"
+msgstr "Teme rezolvate"
+
+#: views/scripts/contentblocks/boxes/my-online-activities.phtml:194
+msgid "Teme restante"
+msgstr "Teme restante"
+
+#: views/scripts/contentblocks/boxes/small-static.phtml:10
+#: views/scripts/contentblocks/boxes/small.phtml:21
+msgid "citeste mai mult"
+msgstr "citeste mai mult"
+
+#: views/scripts/article/comment-thanks.phtml:5
+msgid "Comentariul a fost trimis."
+msgstr "Comentariul a fost trimis."
+
+#: views/scripts/article/comment-thanks.phtml:6
+msgid "De indata ce va fi aprobat comentariul dvs. va fi adaugat galeriei."
+msgstr "De indata ce va fi aprobat comentariul dvs. va fi adaugat galeriei."
+
+#: views/scripts/article/comment.phtml:7
+#: views/scripts/contact/formular.phtml:6
+msgid "NUME COMPLET"
+msgstr "NUME COMPLET"
+
+#: views/scripts/article/comment.phtml:10
+#: views/scripts/contact/formular.phtml:9
+msgid "ADRESA E-MAIL"
+msgstr "ADRESA E-MAIL"
+
+#: views/scripts/article/comment.phtml:14
+#: views/scripts/contact/formular.phtml:17
+msgid "MESAJ"
+msgstr "MESAJ"
+
+#: views/scripts/article/single-photo.phtml:82
+msgid "COMENTARII"
+msgstr "COMENTARII"
+
+#: views/scripts/article/single-photo.phtml:104
+msgid "ADAUGA UN COMENTARIU"
+msgstr "ADAUGA UN COMENTARIU"
+
+#: views/scripts/article/single-photo.phtml:133
+msgid "Toate campurile sunt obligatorii, e-mailul nu va fi facut public.Sunt acceptate numai comentarii cu un continut decent."
+msgstr "Toate campurile sunt obligatorii, e-mailul nu va fi facut public.Sunt acceptate numai comentarii cu un continut decent."
+
+#: views/scripts/author/index.phtml:4
+msgid "BIOGRAFIE"
+msgstr "BIOGRAFIE"
+
+#: views/scripts/author/index.phtml:24
+msgid "PREMII :: EXPOZITII :: EXPEDITII"
+msgstr "PREMII :: EXPOZITII :: EXPEDITII"
+
+#: views/scripts/categories/content-detail.phtml:7
+msgid "Categories"
+msgstr "Categorii"
+
+#: views/scripts/contact/formular.phtml:13
+msgid "SUBIECT"
+msgstr "SUBIECT"
+
+#: views/scripts/contact/index.phtml:9
+msgid "Contact"
+msgstr "Contact"
+
+#: views/scripts/contact/thanks.phtml:5
+msgid "Multumesc pentru mesaj."
+msgstr "Multumesc pentru mesaj."
+
+#: views/scripts/contact/thanks.phtml:6
+msgid "Voi incerca sa raspund solicitarii dvs. in cel mai scurt timp posibil."
+msgstr "Voi incerca sa raspund solicitarii dvs. in cel mai scurt timp posibil."
+
+#: views/scripts/contact/thanks.phtml:7
+msgid "Dan DINU"
+msgstr "Dan DINU"
+
+#: views/scripts/editorial/index.phtml:7
+msgid "Editorial"
+msgstr "Editorial"
+
+#: views/scripts/news/content-detail.phtml:28
+msgid "ALTE STIRI"
+msgstr "ALTE STIRI"
+
+#: views/scripts/usage/index.phtml:4
+msgid "UTILIZARE"
+msgstr "UTILIZARE"
+
+#: views/scripts/projects/content-detail.phtml:7
+msgid "Proiecte"
+msgstr "Proiecte"
+
+#: views/scripts/projects/index.phtml:4
+msgid "Projects"
+msgstr "Proiecte"
+
+#~ msgid "PHOTOS"
+#~ msgstr "FOTOGRAFII"
+
+#~ msgid "DESPRE NOI"
+#~ msgstr "DESPRE NOI"
+
+#~ msgid "Trebuie sa alegeti un nume de utilizator"
+#~ msgstr "Trebuie sa alegeti un nume de utilizator"
+
+#~ msgid "Va rugam completati numele de familie"
+#~ msgstr "Va rugam completati numele de familie"
+
+#~ msgid "Va rugam completati prenumele"
+#~ msgstr "Va rugam completati prenumele"
+
+#~ msgid "Parola nu poate fi goala"
+#~ msgstr "Parola nu poate fi goala"
+
+#~ msgid "Cele doua parole nu sunt la fel"
+#~ msgstr "Cele doua parole nu sunt la fel"
+
+#~ msgid "Va rugam completati CNP-ul"
+#~ msgstr "Va rugam completati CNP-ul"
+
+#~ msgid "Va rugam completati localitatea"
+#~ msgstr "Va rugam completati localitatea"
+
+#~ msgid "Va rugam completati judetul"
+#~ msgstr "Va rugam completati judetul"
+
+#~ msgid "Va rugam completati telefonul"
+#~ msgstr "Va rugam completati telefonul"
+
+#~ msgid ""
+#~ "Trebuie sa fiti de acord cu termenii si conditiile PHOTOLIFE pentru a "
+#~ "continua inregistrarea"
+#~ msgstr ""
+#~ "Trebuie sa fiti de acord cu termenii si conditiile PHOTOLIFE pentru a "
+#~ "continua inregistrarea"
+
+#~ msgid "Nume de utilizator invalid."
+#~ msgstr "Nume de utilizator invalid."
+
+#~ msgid "Acest nume de utilizator exista deja."
+#~ msgstr "Acest nume de utilizator exista deja."
+
+#~ msgid "Numele este ok."
+#~ msgstr "Numele este ok."
+
+#~ msgid "Adresa introdusa nu exista in baza de date"
+#~ msgstr "Adresa introdusa nu exista in baza de date"
+
+#~ msgid "Salut "
+#~ msgstr "Salut "
+
+#~ msgid ""
+#~ "Tu (sau o terta persoana ce a introdus adresa ta de email) a solicitat "
+#~ "schimbarea parolei de acces pe website-ul nostru."
+#~ msgstr ""
+#~ "Tu (sau o terta persoana ce a introdus adresa ta de email) a solicitat "
+#~ "schimbarea parolei de acces pe website-ul nostru."
+
+#~ msgid ""
+#~ " Daca nu ai solicitat acest lucru nu este nevoie sa faci nimic. Datele "
+#~ "tale sunt in siguranta si parola ta este neschimbata."
+#~ msgstr ""
+#~ " Daca nu ai solicitat acest lucru nu este nevoie sa faci nimic. Datele "
+#~ "tale sunt in siguranta si parola ta este neschimbata."
+
+#~ msgid ""
+#~ "Daca ai solicitat serviciul copiaza acest link in adresa browser-ului "
+#~ "tau:\n"
+#~ msgstr ""
+#~ "Daca ai solicitat serviciul copiaza acest link in adresa browser-ului "
+#~ "tau:\n"
+
+#~ msgid ""
+#~ "Iti multumim,\n"
+#~ "Echipa PHOTOLIFE"
+#~ msgstr ""
+#~ "Iti multumim,\n"
+#~ "Echipa PHOTOLIFE"
+
+#~ msgid "Echipa PHOTOLIFE"
+#~ msgstr "Echipa PHOTOLIFE"
+
+#~ msgid "Recuperare parola"
+#~ msgstr "Recuperare parola"
+
+#~ msgid "Codul este invalid"
+#~ msgstr "Codul este invalid"
+
+#~ msgid "Modificarile au fost efectuate"
+#~ msgstr "Modificarile au fost efectuate"
+
+#~ msgid "Numele de utilizator exista deja"
+#~ msgstr "This username already exists in our database"
+
+#~ msgid "Adresa de email exista deja in baza de date"
+#~ msgstr "The email address already exists in our database"
+
+#~ msgid "Utilizator neautentificat."
+#~ msgstr "Unauthorised user."
+
+#~ msgid "Modificare date personale"
+#~ msgstr "Edit personal data"
+
+#~ msgid "INAPOI"
+#~ msgstr "BACK"
+
+#~ msgid "UTILIZATOR"
+#~ msgstr "USER"
+
+#~ msgid "NUME"
+#~ msgstr "NAME"
+
+#~ msgid "PRENUME"
+#~ msgstr "SURNAME"
+
+#~ msgid "PAROLA"
+#~ msgstr "PASSWORD"
+
+#~ msgid "CONFIRMA PAROLA"
+#~ msgstr "CONFIRM PASSWORD"
+
+#~ msgid "CNP"
+#~ msgstr "ID NUMBER"
+
+#~ msgid "OCUPATIA"
+#~ msgstr "OCCUPATION"
+
+#~ msgid "LOCALITATE"
+#~ msgstr "CITY"
+
+#~ msgid "JUDET"
+#~ msgstr "COUNTY"
+
+#~ msgid "EMAIL"
+#~ msgstr "EMAIL"
+
+#~ msgid "WEBSITE"
+#~ msgstr "WEBSITE"
+
+#~ msgid "TELEFON"
+#~ msgstr "PHONE"
+
+#~ msgid "YAHOO ID"
+#~ msgstr "YAHOO ID"
+
+#~ msgid "DATA NASTERII"
+#~ msgstr "BIRTH DATE"
+
+#~ msgid "NIVELUL DE PREGATIRE"
+#~ msgstr "YOUR SKILL"
+
+#~ msgid "Incepator"
+#~ msgstr "Beginner"
+
+#~ msgid "Mediu"
+#~ msgstr "Medium"
+
+#~ msgid "Avansat"
+#~ msgstr "Advanced"
+
+#~ msgid "PRACTICATI FOTOGRAFIA"
+#~ msgstr "PHOTO PRACTITIONER"
+
+#~ msgid "Amator"
+#~ msgstr "Amateur"
+
+#~ msgid "Profesionist"
+#~ msgstr "Professional"
+
+#~ msgid "ADRESA"
+#~ msgstr "ADDRESS"
+
+#~ msgid "APARATUL FOTO FOLOSIT"
+#~ msgstr "PHOTO CAMERA"
+
+#~ msgid "DE CAND FACETI FOTOGRAFIE"
+#~ msgstr "SINCE WHEN DO YOU PRACTICE PHOTOGRAPHY"
+
+#~ msgid "TIPUL DE FOTOGRAFIE PREFERAT"
+#~ msgstr "TYPE OF PHOTOGRAPHY YOU PREFER"
+
+#~ msgid "UNDE ATI AFLAT DE ACEST SITE?"
+#~ msgstr "WHERE DID YOU FIND OUT ABOUT US?"
+
+#~ msgid "Sunt de acord cu urmatorii"
+#~ msgstr "I agree to the following"
+
+#~ msgid "termeni si conditii"
+#~ msgstr "terms and conditions"
+
+#~ msgid "DA"
+#~ msgstr "YES"
+
+#~ msgid "NU"
+#~ msgstr "NO"
+
+#~ msgid "Abonare newsletter"
+#~ msgstr "Newsletter subscribe"
+
+#~ msgid ""
+#~ "Campurile marcate cu * sunt obligatorii. CNP-ul este necesar pentru "
+#~ "emiterea actelor fiscale iar adresa trebuie sa fie completa si corecta "
+#~ "pentru a primi materialele de la cursurile urmate.<br/><br/>Toate "
+#~ "informatiile furnizate sunt confidentiale si vor fi utilizate numai in "
+#~ "activitatea SC PHOTOLIFE SRL. Informatiile nu vor fi cedate sau cesionate "
+#~ "altor firme sau persoane."
+#~ msgstr ""
+#~ "The fields marked with * are mandatory. The ID Number is necessary on "
+#~ "order to issue the fiscal papers and the address must be complete and "
+#~ "correct in order to receive the course related materials.<br/><br/>All "
+#~ "the provided information is confidential and will be used only in SC "
+#~ "PHOTOLIFE SRL's activity. Such information will not be given nor shared "
+#~ "with any third parties."
+
+#~ msgid "STATISTICI"
+#~ msgstr "STATISTICS"
+
+#~ msgid "Pana in prezent ati accesat urmatoarele activitati:"
+#~ msgstr "Until now you have attended the following activities:"
+
+#~ msgid ""
+#~ "Va multumim pentru alegerea facuta si va asteptam si la alte evenimente "
+#~ "si activitati PHOTOLIFE."
+#~ msgstr ""
+#~ "Thank you for your choice and we hope to see you participating in our "
+#~ "other events and activities."
+
+#~ msgid "INREGISTRARE"
+#~ msgstr "REGISTER"
+
+#~ msgid "Status inregistrare"
+#~ msgstr "Registration status"
+
+#~ msgid "Inregistrarea s-a efectuat cu succes."
+#~ msgstr "You are now a member of the PhotoLife community. Thank you."
+
+#~ msgid "Va multumim,"
+#~ msgstr "Thank you,"
+
+#~ msgid "Echipa PHOTOLIFE."
+#~ msgstr "The PHOTOLIFE team."
+
+#~ msgid "aici"
+#~ msgstr "here"
+
+#~ msgid "pentru a reveni la prima pagina."
+#~ msgstr "in order to go back to the first page."
+
+#~ msgid "Parola de acces a fost schimbata"
+#~ msgstr "Your password has been successfully changed"
+
+#~ msgid "Parola dvs. de acces in sistem a fost schimbata."
+#~ msgstr "Your access password has been changed."
+
+#~ msgid ""
+#~ "Un cod de autentificare pentru schimbarea parolei curente a fost trimis "
+#~ "la adresa specificata."
+#~ msgstr ""
+#~ "An authentication code allowing you to change your password has been sent "
+#~ "to the specified address."
+
+#~ msgid ""
+#~ "Verificati-va contul (inclusiv folderele bulk/spam) si procedati conform "
+#~ "instructiunilor."
+#~ msgstr ""
+#~ "Please check your email account (including the bulk/spam folders) and "
+#~ "proceed according to the instructions."
+
+#~ msgid "Adresa de email"
+#~ msgstr "Email address"
+
+#~ msgid "Adresa email nu este valida"
+#~ msgstr "The email address is not valid"
+
+#~ msgid "Mesagerie personala"
+#~ msgstr "Mesagerie personala"
+
+#~ msgid "Nu aveti nici un mesaj"
+#~ msgstr "Nu aveti nici un mesaj"
+
+#~ msgid "De la"
+#~ msgstr "De la"
+
+#~ msgid "Subiect"
+#~ msgstr "Subject"
+
+#~ msgid "Data"
+#~ msgstr "Date"
+
+#~ msgid "INAINTE"
+#~ msgstr "INAINTE"
+
+#~ msgid "Mesaj"
+#~ msgstr "Message"
+
+#~ msgid "STERGE MESAJ"
+#~ msgstr "STERGE MESAJ"
+
+#~ msgid "Schimbare parola"
+#~ msgstr "Change password"
+
+#~ msgid "Parola noua"
+#~ msgstr "New password"
+
+#~ msgid "Confirma parola"
+#~ msgstr "Confirm password"
+
+#~ msgid "Mesajul este gol"
+#~ msgstr "Message is empty"
+
+#~ msgid "Eroare la procesare imagini"
+#~ msgstr "Error while processing images"
+
+#~ msgid "Va rugam completati subiectul"
+#~ msgstr "Please fill out the subject"
+
+#~ msgid "Subiectul este gol"
+#~ msgstr "Subject is empty"
+
+#~ msgid "be authenticated"
+#~ msgstr "be authenticated"
+
+#~ msgid "be a confirmed member of this course"
+#~ msgstr "be a confirmed member of this course"
+
+#~ msgid "Va rugam completati numele"
+#~ msgstr "Please fill out your name"
+
+#~ msgid "Va rugam completati email-ul"
+#~ msgstr "Please fill out your email"
+
+#~ msgid "Comanda"
+#~ msgstr "Order"
+
+#~ msgid "Produsul a fost adaugat in cosul de cumparaturi"
+#~ msgstr "The product was added to your shopping basket"
+
+#~ msgid ""
+#~ "<h1 class='red'>A aparut o problema in procesarea comenzii.<br/>Daca "
+#~ "problema persista va rugam sa ne contactati. Multumim.</h1>"
+#~ msgstr ""
+#~ "<h1 class='red'>There was a problem while processing your order.<br/>If "
+#~ "this problem occurs again please contact us.Thank you</h1>"
+
+#~ msgid "Cantitatea introdusa nu este valida"
+#~ msgstr "The desired quantity is invalid"
+
+#~ msgid "Cantitatea s-a modificat"
+#~ msgstr "The quantity has been changed"
+
+#~ msgid "Produsul a fost eliminat din cosul de cumparaturi."
+#~ msgstr "The product was removed from your shopping basket."
+
+#~ msgid "Va rugam completati adresa"
+#~ msgstr "Please fill out your address"
+
+#~ msgid ""
+#~ "Comanda dumneavoasta a fost preluata si va fi procesata in cel mai scurt "
+#~ "timp.<br/>Va multumim."
+#~ msgstr ""
+#~ "Your order has been received and will be processed shortly.<br/>Thank you."
+
+#~ msgid "Comanda dumneavoastra trebuie sa contina minim un produs."
+#~ msgstr "Your order needs to contain at least an item."
+
+#~ msgid "CERERE IN CURS DE PROCESARE"
+#~ msgstr "REQUEST BEING PROCESSED"
+
+#~ msgid "FACTURA PROFORMA TRIMISA"
+#~ msgstr "THE BILL HAS BEEN SENT"
+
+#~ msgid "FACTURA ESTE ACHITATA"
+#~ msgstr "PAYMENT RECEIVED"
+
+#~ msgid "PREZENTA CONFIRMATA"
+#~ msgstr "PRESENCE CONFIRMED"
+
+#~ msgid "IN PROGRES"
+#~ msgstr "IN PROGRESS"
+
+#~ msgid "WORKSHOP FOTO"
+#~ msgstr "PHOTO WORKSHOP"
+
+#~ msgid "CURS FOTO ONLINE"
+#~ msgstr "ONLINE PHOTO COURSE"
+
+#~ msgid "CURS IN BRASOV"
+#~ msgstr "COURSE IN BRASOV"
+
+#~ msgid "details"
+#~ msgstr "details"
+
+#~ msgid "overview"
+#~ msgstr "overview"
+
+#~ msgid "workshops"
+#~ msgstr "workshops"
+
+#~ msgid "courses"
+#~ msgstr "courses"
+
+#~ msgid "inregistrare"
+#~ msgstr "register"
+
+#~ msgid "parola"
+#~ msgstr "password"
+
+#~ msgid "check-user"
+#~ msgstr "check-user"
+
+#~ msgid "schimba-parola"
+#~ msgstr "change-password"
+
+#~ msgid "edit"
+#~ msgstr "edit-details"
+
+#~ msgid "Utilizator incorect"
+#~ msgstr "Incorrect user"
+
+#~ msgid "Introduceti o parola"
+#~ msgstr "Please input your password"
+
+#~ msgid "Login incorect"
+#~ msgstr "Incorrect login"
+
+#~ msgid "site"
+#~ msgstr "site"
+
+#~ msgid "shop"
+#~ msgstr "shop"
+
+#~ msgid "services"
+#~ msgstr "services"
+
+#~ msgid "online-courses"
+#~ msgstr "online-courses"
+
+#~ msgid "photo-courses"
+#~ msgstr "photo-courses"
+
+#~ msgid "register"
+#~ msgstr "register"
+
+#~ msgid "confirm-register"
+#~ msgstr "confirm-subscription"
+
+#~ msgid "members"
+#~ msgstr "members"
+
+#~ msgid "my-activities"
+#~ msgstr "my-activities"
+
+#~ msgid "forum-message"
+#~ msgstr "forum-message"
+
+#~ msgid "Activitatile mele"
+#~ msgstr "My activities"
+
+#~ msgid "oppinions"
+#~ msgstr "oppinions"
+
+#~ msgid "my-lessons"
+#~ msgstr "my-lessons"
+
+#~ msgid "my-tasks"
+#~ msgstr "my-tasks"
+
+#~ msgid "subscribers"
+#~ msgstr "subscribers"
+
+#~ msgid "task"
+#~ msgstr "task"
+
+#~ msgid "FORMULAR"
+#~ msgstr "FORM"
+
+#~ msgid "Recomandare curs foto"
+#~ msgstr "Photo course recommendation"
+
+#~ msgid "Nume"
+#~ msgstr "Name"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid ""
+#~ "Fotografiile inscrise trebuie sa fie in format JPG si sa aiba o marime "
+#~ "maxima de 800 de pixeli latura mare. Imaginile care nu respecta aceste "
+#~ "caracteristici nu sunt acceptate pentru incarcare."
+#~ msgstr ""
+#~ "The photos you're sending must be in the JPG format and have to be less "
+#~ "than 800 pixels wide. The images which won't fit these characteristics "
+#~ "won't be accepted for uploading."
+
+#~ msgid "Courses"
+#~ msgstr "Courses"
+
+#~ msgid "Cursuri online"
+#~ msgstr "Online courses"
+
+#~ msgid "CURS FOTO IN BRASOV"
+#~ msgstr "PHOTO COURSE IN BRASOV"
+
+#~ msgid "Workshops"
+#~ msgstr "Workshops"
+
+#~ msgid "TRAINERI"
+#~ msgstr "TRAINERS"
+
+#~ msgid "Curs foto"
+#~ msgstr "Photography courses"
+
+#~ msgid "Workshop Foto"
+#~ msgstr "Photo workshops"
+
+#~ msgid "Magazin Online"
+#~ msgstr "Online shop"
+
+#~ msgid "Servicii Foto"
+#~ msgstr "Photo services"
+
+#~ msgid "Am uitat parola"
+#~ msgstr "Forgot password"
+
+#~ msgid "Inregistreaza-te"
+#~ msgstr "Register"
+
+#~ msgid "BINE AI VENIT"
+#~ msgstr "WELCOME"
+
+#~ msgid "Cursurile mele"
+#~ msgstr "My courses"
+
+#~ msgid "Contul meu"
+#~ msgstr "My account"
+
+#~ msgid "Logout"
+#~ msgstr "Logout"
+
+#~ msgid "locuri ramase"
+#~ msgstr "places left"
+
+#~ msgid "incepe in"
+#~ msgstr "starts in"
+
+#~ msgid "Ataseaza imagini"
+#~ msgstr "Attach images"
+
+#~ msgid "Not authenticated"
+#~ msgstr "Not authenticated"
+
+#~ msgid "In order to post a reply you have to be authenticated."
+#~ msgstr "In order to post a reply you have to be authenticated."
+
+#~ msgid "Trimis"
+#~ msgstr "Sent"
+
+#~ msgid "Sunteti deja inscris"
+#~ msgstr "You are already subscribed"
+
+#~ msgid "Sunteti deja inscris la:"
+#~ msgstr "You are already subscribed at:"
+
+#~ msgid "Data la care incepe sesiunea:"
+#~ msgstr "The sessions will begin at:"
+
+#~ msgid ""
+#~ "In caz ca nu ati primit nici o notificare de la noi va rugam sa ne "
+#~ "scrieti un e-mail pe adresa contact(at)photolife.ro pentru a primi "
+#~ "informatii detaliate cu privire la aceasta activitate."
+#~ msgstr ""
+#~ "In case you did not receive any notification from us please write us an e-"
+#~ "mail at contact(at)photolife.ro in order to receive detailed informations "
+#~ "regarding this activity."
+
+#~ msgid ""
+#~ "Va multumim din nou si speram sa va bucurati pe deplin de alegerea facuta."
+#~ msgstr ""
+#~ "Thank you again and we truly hope you will enjoy your choice with us."
+
+#~ msgid "The PHOTOLIFE team"
+#~ msgstr "The PHOTOLIFE team"
+
+#~ msgid "No such activity"
+#~ msgstr "No such activity"
+
+#~ msgid "The activity you requested to subscribe to is unavailable."
+#~ msgstr "The activity you requested to subscribe to is unavailable."
+
+#~ msgid "Inscriere"
+#~ msgstr "Register"
+
+#~ msgid "Thank you for your decision to subscribe to the following session:"
+#~ msgstr "Thank you for your decision to subscribe to the following session:"
+
+#~ msgid "Please confirm here your choice:"
+#~ msgstr "Please confirm here your choice:"
+
+#~ msgid "Confirm registration"
+#~ msgstr "Confirm registration"
+
+#~ msgid "Cancel registration"
+#~ msgstr "Cancel registration"
+
+#~ msgid "Thank you"
+#~ msgstr "Thank you"
+
+#~ msgid "In order to subscribe to"
+#~ msgstr "In order to subscribe to"
+
+#~ msgid "you have to be authenticated."
+#~ msgstr "you have to be authenticated."
+
+#~ msgid "If you don't have a PHOTOLIFE account please click "
+#~ msgstr "If you don't have a PHOTOLIFE account please click "
+
+#~ msgid "here"
+#~ msgstr "here"
+
+#~ msgid "to create one."
+#~ msgstr "to create one."
+
+#~ msgid "Thank you and sorry for all inconveniences"
+#~ msgstr "Thank you and sorry for all inconveniences"
+
+#~ msgid "Va multumim"
+#~ msgstr "Thank you"
+
+#~ msgid "Ati fost inscris la urmatorul curs:"
+#~ msgstr "You were registered as a participant to the following course:"
+
+#~ msgid "Data la care incepe sesiunea este"
+#~ msgstr "The course sessions will begin at"
+
+#~ msgid ""
+#~ "In scurt timp veti fi contactat pentru a primi informatii detaliate cu "
+#~ "privire la aceasta activitate."
+#~ msgstr ""
+#~ "Shortly you will be contacted in order to receive detailed informations "
+#~ "regarding this activity."
+
+#~ msgid "Lista de conversatii"
+#~ msgstr "Conversations"
+
+#~ msgid "Pornita de"
+#~ msgstr "Started by"
+
+#~ msgid "Subiect conversatie"
+#~ msgstr "Conversation subject"
+
+#~ msgid "Conversatie noua"
+#~ msgstr "New conversation"
+
+#~ msgid ""
+#~ "You don't have enough rights in order to be able to post a new thread"
+#~ msgstr ""
+#~ "You don't have enough rights in order to be able to post a new thread"
+
+#~ msgid "CAMPUS INDEX"
+#~ msgstr "CAMPUS INDEX"
+
+#~ msgid "MEMBRII PHOTOLIFE"
+#~ msgstr "PHOTOLIFE MEMBERS"
+
+#~ msgid "ULTIMELE FOTOGRAFII"
+#~ msgstr "LAST PHOTOS"
+
+#~ msgid "ULTIMELE DISCUTII"
+#~ msgstr "LAST OPPINIONS"
+
+#~ msgid "citeste tot mesajul"
+#~ msgstr "read full message"
+
+#~ msgid "Utilizatori"
+#~ msgstr "Users"
+
+#~ msgid "din"
+#~ msgstr "from"
+
+#~ msgid "Membrii PHOTOLIFE"
+#~ msgstr "The PHOTOLIFE members"
+
+#~ msgid "CAUTA"
+#~ msgstr "SEARCH"
+
+#~ msgid "SORTEAZA"
+#~ msgstr "SORT"
+
+#~ msgid "PRIMII INSCRISI"
+#~ msgstr "FIRST REGISTERED"
+
+#~ msgid "ULTIMII INSCRISI"
+#~ msgstr "LAST REGISTERED"
+
+#~ msgid "Detalii membru"
+#~ msgstr "Member details"
+
+#~ msgid "Activitati urmate"
+#~ msgstr "Followed activities"
+
+#~ msgid "ani"
+#~ msgstr "years"
+
+#~ msgid "Cursuri Brasov"
+#~ msgstr "Courses in Brasov"
+
+#~ msgid "My activities"
+#~ msgstr "My activities"
+
+#~ msgid "My lessons"
+#~ msgstr "My lessons"
+
+#~ msgid "Fotografii personale"
+#~ msgstr "Personal photos"
+
+#~ msgid "LISTA FOTOGRAFII"
+#~ msgstr "PHOTOS LIST"
+
+#~ msgid "FOTOGRAFIE NOUA"
+#~ msgstr "NEW PHOTO"
+
+#~ msgid "Fotografie"
+#~ msgstr "Photo"
+
+#~ msgid "Detalii"
+#~ msgstr "Details"
+
+#~ msgid "Data upload"
+#~ msgstr "Upload date"
+
+#~ msgid "APROBATA"
+#~ msgstr "APPROVED"
+
+#~ msgid "ASTEAPTA APROBAREA"
+#~ msgstr "AWAITING APPROVAL"
+
+#~ msgid "My tasks"
+#~ msgstr "My tasks"
+
+#~ msgid "Nu exista teme pentru aceasta activitate"
+#~ msgstr "There are no tasks for this activity"
+
+#~ msgid "Download not available"
+#~ msgstr "Download not available"
+
+#~ msgid ""
+#~ "Momentan aceasta lectie sau tema nu este activata. Asteptati pana la "
+#~ "confirmarea prezentei dumneavoastra."
+#~ msgstr ""
+#~ "For the moment this lesson or theme isn't active. Please wait until your "
+#~ "course presence is confirmed."
+
+#~ msgid "Pentru a putea descarca aceasta lectie trebuie sa fiti autentificat"
+#~ msgstr "In order to download this lesson you have to be authentified"
+
+#~ msgid "Task not available"
+#~ msgstr "Task not available"
+
+#~ msgid "Pentru a putea accesa aceasta tema trebuie sa fiti autentificat"
+#~ msgstr "In order to access this task you have to be authentified"
+
+#~ msgid "Fotografii membri PHOTOLIFE"
+#~ msgstr "PHOTOLIFE members' photos"
+
+#~ msgid "Membru"
+#~ msgstr "Member"
+
+#~ msgid "Detalii personale"
+#~ msgstr "Personal details"
+
+#~ msgid "Subscribed members"
+#~ msgstr "Subscribed members"
+
+#~ msgid "Tema"
+#~ msgstr "Task"
+
+#~ msgid "Rezolvare"
+#~ msgstr "Answer"
+
+#~ msgid "Feedback tema"
+#~ msgstr "Task feedback"
+
+#~ msgid "Raspunde"
+#~ msgstr "Answer"
+
+#~ msgid "In order to be able to respond you need to be authenticated"
+#~ msgstr "In order to be able to respond you need to be authenticated"
+
+#~ msgid "Imagine"
+#~ msgstr "Image"
+
+#~ msgid "Descriere"
+#~ msgstr "Description"
+
+#~ msgid "Selectati imaginea"
+#~ msgstr "Select image"
+
+#~ msgid "Colegi"
+#~ msgstr "Colleagues"
+
+#~ msgid "Info curs"
+#~ msgstr "Course info"
+
+#~ msgid "Nu exista lectii pentru aceasta activitate"
+#~ msgstr "There are no lessons for this activity"
+
+#~ msgid "Lectii active"
+#~ msgstr "Active lessons"
+
+#~ msgid "Durata"
+#~ msgstr "Length"
+
+#~ msgid ""
+#~ "Lectiile sunt in format PDF. Pentru a putea vizualiza documentele offline "
+#~ "trebuie sa aveti instalat pe calculator programul Abobe Acrobat Reader. "
+#~ "Acesta se poate descarca gratuit de la aceasta adresa: <a target='_blank' "
+#~ "href='http://get.adobe.com/reader/'>http://get.adobe.com/reader/</a>"
+#~ msgstr ""
+#~ "The lessons are in PDF format. In order to be able to open the documents "
+#~ "you need to have installed on your computer the Adobe Acrobar Reader "
+#~ "program. This can be downloaded for free at this address: <a "
+#~ "target='_blank' href='http://get.adobe.com/reader/'>http://get.adobe.com/"
+#~ "reader/</a>"
+
+#~ msgid "Membrii inscrisi la acest curs"
+#~ msgstr "Subscribed members to this course"
+
+#~ msgid "Varsta"
+#~ msgstr "Age"
+
+#~ msgid "Localitate"
+#~ msgstr "City"
+
+#~ msgid ""
+#~ "Accesati un membru pentru a trimite un mesaj privat sau pentru a vedea "
+#~ "mai multe informatii despre acesta. Discutiile intre membrii se pot purta "
+#~ "si in interiorul site-ului cu ajutorul meniului DISCUTII din bara de "
+#~ "meniu din stanga."
+#~ msgstr ""
+#~ "Click on a member in order to send him a private message or see detailed "
+#~ "information. The conversations between members can also take place in the "
+#~ "CONVERSATIONS area from the left side."
+
+#~ msgid "Teme active"
+#~ msgstr "Active tasks"
+
+#~ msgid "Rezolvata"
+#~ msgstr "Solved"
+
+#~ msgid ""
+#~ "La accesarea oricarei teme veti intra in pagina de rezolvare a acestei. "
+#~ "In aceasta pagina puteti citi care este tema si ce trebuie sa faceti "
+#~ "pentru a o rezolva si pentru a incarca imaginile."
+#~ msgstr ""
+#~ "On accessing any task you'll be redirected into the answer page of that "
+#~ "specific task. In that page you can read the requirements of the task and "
+#~ "what would you have to do in order to solve it and upload your images."
+
+#~ msgid "My shopping basket"
+#~ msgstr "My shopping basket"
+
+#~ msgid "Item name"
+#~ msgstr "Item name"
+
+#~ msgid "Quantity"
+#~ msgstr "Quantity"
+
+#~ msgid "Pret unitar"
+#~ msgstr "Item price"
+
+#~ msgid "Pret total"
+#~ msgstr "Total price"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#~ msgid "Telefon"
+#~ msgstr "Phone"
+
+#~ msgid "Adresa"
+#~ msgstr "Address"
+
+#~ msgid "Judet"
+#~ msgstr "County"
+
+#~ msgid "Online shop"
+#~ msgstr "Online shop"
+
+#~ msgid "CUM CUMPAR"
+#~ msgstr "HOW DO I BUY"
+
+#~ msgid "Cos de cumparaturi: "
+#~ msgstr "Shopping basket:"
+
+#~ msgid " produse"
+#~ msgstr " items"
+
+#~ msgid "Vizualizare"
+#~ msgstr "View"
+
+#~ msgid "Cos de cumparaturi gol"
+#~ msgstr "Shopping basket empty"
+
+#~ msgid "Cum cumpar?"
+#~ msgstr "How do I buy?"
+
+#~ msgid "Inapoi la magazin"
+#~ msgstr "Back to the shop"
+
+#~ msgid "Services"
+#~ msgstr "Services"
+
+#~ msgid "SERVICII"
+#~ msgstr "SERVICES"
+
+#~ msgid "COPYRIGHT"
+#~ msgstr "COPYRIGHT"
+
+#~ msgid ""
+#~ "In order to be able to post a new thread you need to be authenticated"
+#~ msgstr ""
+#~ "In order to be able to post a new thread you need to be authenticated"
+
+#~ msgid "Echipa PhotoLife"
+#~ msgstr "The PhotoLife team"
+
+#~ msgid "Echipa PhotoLife."
+#~ msgstr "The PhotoLife team."
+
+#~ msgid "The PhotoLife.ro team"
+#~ msgstr "The PhotoLife.ro team"
+
+#~ msgid "Membrii PhotoLife"
+#~ msgstr "Photolife members"
+
+#~ msgid "Echipa PhotoLife.ro"
+#~ msgstr "The PhotoLife team."
+
+#~ msgid "Sunteti deja inscris la cursul:"
+#~ msgstr ""
+#~ "You were already registered as a participant to the following course:"
+
+#~ msgid "Data la care incep sesiunile este"
+#~ msgstr "The course sessions will begin at"
+
+#~ msgid "Course registration"
+#~ msgstr "Course registration"
+
+#~ msgid "S-A EMIS FACTURA"
+#~ msgstr "AWAITING PAYMENT"
+
+#~ msgid "Platit"
+#~ msgstr "Paid"
+
+#~ msgid "LECTII"
+#~ msgstr "LESSONS"
+
+#~ msgid "TEME"
+#~ msgstr "TASKS"
+
+#~ msgid "PARERI"
+#~ msgstr "OPINIONS"
+
+#~ msgid "In order to be able to download this file you have to "
+#~ msgstr "In order to be able to download this file you have to "
+
+#~ msgid "In order to be able to access this task you have to "
+#~ msgstr "In order to be able to access this task you have to "
+
+#~ msgid "Membrii inscrisi"
+#~ msgstr "Registered members"
+
+#~ msgid "TERMS"
+#~ msgstr "TERMS"
+
+#~ msgid "7 zile"
+#~ msgstr "7 days"
+
+#~ msgid "Members"
+#~ msgstr "Members"
+
+#~ msgid "Photos"
+#~ msgstr "Photos"
+
+#~ msgid "Conversations"
+#~ msgstr "Conversations"
+
+#~ msgid "Send"
+#~ msgstr "Send"
+
+#~ msgid "Pagina principala"
+#~ msgstr "Main page"

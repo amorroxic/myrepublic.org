@@ -1,0 +1,119 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseURL() . '/styles/jquery-ui/flick/jquery-ui-1.8.4.custom.css', 'screen,projection');                 
+$this->headScript()->appendFile($this->baseURL() . '/javascript/ajax/utils.js');
+$this->headScript()->appendFile($this->baseURL() . '/javascript/ajax/ajax.js');
+$this->headScript()->appendFile($this->baseURL() . '/javascript/jquery/jquery-ui-1.8.4.custom.min.js');
+
+?>
+<script language="JavaScript">
+
+$(document).ready(function() {
+	monitorSetFilters();
+});
+
+</script>
+
+<h4>My photo sets.</h4>
+<?php echo $this->render('my-account/submenu-logged.phtml'); ?>	
+
+<div id="dialog-confirm" title="Delete photo set" style="display:none;">
+	<div class="top_5">Are you sure?</div>
+</div>
+
+<div id="dialog-new" title="Add a new photo set" style="display:none;">
+	<input type="text" id="set-name" style="width:230px;"/>
+</div>
+
+<div id="dialog-addphotos" title="Add photos from which location?" style="display:none;">
+	<select id="destination-list" style="width:230px;">
+		<?php
+			
+	/*
+		$selected = "";
+		if (isset($this->locationID) && $this->locationID == "all") $selected = "selected='selected'";
+		echo "<option ".$selected." value='all' style='background:#e3e4ff;'>All destinations</option>";
+	*/
+	
+		$i = 0; 
+		foreach ($this->destinations as $destination) {
+			$selected = "";
+			if (isset($this->locationID)) {
+				if ($destination["id"] == $this->locationID) $selected = "selected='selected'";
+			} else {
+				if ($i == 0) $selected = "selected='selected'";
+			}
+			$i++;
+			echo "<option ".$selected." value='".$destination["id"]."'>".$destination["name"].", ".$destination["country_name"]."</option>";
+		}
+		?>
+	</select>
+</div>
+
+
+<script type="text/javascript">
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		$("#dialog").dialog("destroy");
+	
+		
+		function deleteDialog() {
+
+			$("#dialog-confirm").dialog({
+				resizable: false,
+				height:150,
+				modal: true,
+				buttons: {
+					'Delete': function() {
+						var setID = $('#set-list').val();
+						deleteUserSet(setID);
+						$(this).dialog('close');
+					},
+					Cancel: function() {
+						$(this).dialog('close');
+					}
+				}
+			});
+
+		}
+		
+		
+		function newSetDialog() {
+
+			$("#dialog-new").dialog({
+				resizable: false,
+				height:150,
+				modal: true,
+				buttons: {
+					'Add photo set': function() {
+						var setName = $('#set-name').val();
+						addUserSet(setName);
+						$(this).dialog('close');
+					},
+					Cancel: function() {
+						$(this).dialog('close');
+					}
+				}
+			});
+
+		}		
+		
+		
+		function addPhotosDialog() {
+
+			$("#dialog-addphotos").dialog({
+				resizable: false,
+				height:150,
+				modal: true,
+				buttons: {
+					Close: function() {
+						$(this).dialog('close');
+					}
+				}
+			});
+
+		}			
+		
+</script>
+<div id="set-container">
+<?php echo $this->render("my-account/sets-inner.phtml");?>
+</div>
+

@@ -1,0 +1,8 @@
+<?php
+	$action = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+	$action = strtolower($action);
+?>
+
+<ul id="page-navigation" >
+	<li <?php if ($action == "index") echo "class='current'";?>><a href="/admin/comentarii">Comentarii</a></li>
+</ul>
